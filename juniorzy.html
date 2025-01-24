@@ -6,6 +6,7 @@
     <title>Juniorzy - DKS Czarni Kozłowa Góra</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Podstawowe style */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,7 +14,6 @@
             background-color: #f4f4f4;
             width: 100%;
             box-sizing: border-box;
-            padding: 0 5%;
         }
 
         header {
@@ -23,24 +23,29 @@
             padding: 20px 0;
         }
 
+        header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
         header .logo h1 {
             margin: 0;
             font-size: 3em;
         }
-        header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
 
-header .logo img.herb {
-    width: 50px; /* Dostosuj rozmiar do potrzeb */
-    height: auto;
-}
+        header .logo img.herb {
+            width: 50px;
+            height: auto;
+        }
 
+        /* Menu Toggle (3 kreski) */
+        .menu-wrapper {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-        /* Menu Toggle (3 paski) */
         .menu-toggle {
             display: flex;
             flex-direction: column;
@@ -48,31 +53,39 @@ header .logo img.herb {
             height: 25px;
             justify-content: space-between;
             cursor: pointer;
-            margin: 10px;
+            margin: 0 auto;
         }
 
-        .bar {
+        .menu-toggle .bar {
             width: 100%;
             height: 5px;
             background-color: black;
+        }
+
+        .menu-label {
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 5px;
+            color: black;
         }
 
         /* Wysuwana nawigacja */
         nav {
             position: fixed;
             top: 0;
-            left: -250px; /* Początkowe położenie poza ekranem */
+            left: -100%; /* Ukrycie poza ekranem */
             width: 250px;
-            height: auto;
+            height: 100%; /* Pełna wysokość okna */
             background-color: #333;
             color: white;
             padding: 20px;
-            transition: left 0.3s ease-in-out; /* Animacja przesuwania nawigacji */
+            transition: left 0.3s ease-in-out; /* Animacja wchodzenia nawigacji */
             z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
         }
 
         nav.show {
-            left: 0; /* Wysunięcie nawigacji na ekran */
+            left: 0; /* Wyświetlenie nawigacji */
         }
 
         /* Przyciski w nawigacji */
@@ -111,62 +124,10 @@ header .logo img.herb {
             cursor: pointer;
             position: absolute;
             top: 20px;
-            left: 20px; /* X po lewej stronie */
+            left: 20px;
         }
 
-        /* Ukrycie przycisku zamknięcia na mniejszych ekranach */
-        @media (max-width: 768px) {
-            .close-btn {
-                display: block; /* Pokazuje przycisk na małych ekranach */
-            }
-        }
-
-        /* Responsive layout for button-container */
-        @media (max-width: 768px) {
-            .button-container {
-                flex-direction: column; /* Stack buttons vertically */
-                align-items: center;
-            }
-
-            .button-container a {
-                width: auto; /* Make buttons adjust width based on text */
-                margin-bottom: 10px; /* Add spacing between buttons */
-            }
-        }
-
-        /* Przycisk w sekcji */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
-        }
-
-        .button-container a {
-            background-color: #c62828;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 15px 25px; /* Adjust padding to make buttons smaller */
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-            display: inline-block; /* Make button's width depend on the text */
-            text-align: center; /* Center the text within the button */
-        }
-
-        .button-container a:hover {
-            background-color: #b71c1c;
-        }
-
-        nav ul li a img {
-            width: 40px;
-            height: auto;
-            margin: 0 10px;
-        }
-
-        /* Style for the content and footer */
+        /* Główna sekcja */
         main {
             padding: 20px;
             margin: 20px auto;
@@ -177,6 +138,7 @@ header .logo img.herb {
             color: black;
         }
 
+        /* Stopka */
         footer {
             background-color: #c62828;
             color: white;
@@ -233,25 +195,71 @@ header .logo img.herb {
             width: 20px;
             height: 20px;
         }
+        /* Przyciski w sekcji */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* Przyciski będą się łamać na mniejszych ekranach */
+}
+
+.button-container a {
+    background-color: #c62828; /* Ciemnoczerwony kolor */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 15px 30px; /* Większe przyciski */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Płynne przejście przy hover */
+    display: inline-block;
+    text-align: center; /* Tekst wyśrodkowany */
+}
+
+.button-container a:hover {
+    background-color: #b71c1c; /* Ciemniejszy czerwony przy hover */
+    transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Wyraźniejszy cień */
+}
+
+/* Stylizacja przycisków na mniejszych ekranach */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Przyciski w jednej kolumnie */
+        gap: 15px; /* Odstępy między przyciskami */
+    }
+
+    .button-container a {
+        width: 100%; /* Przyciski zajmują pełną szerokość */
+        text-align: center; /* Wyśrodkowanie tekstu */
+    }
+}
+nav ul li a img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+
     </style>
 </head>
 <body>
-   <header>
+    <header>
         <div class="logo">
             <img src="herb_dks.png" alt="Herb lewy" class="herb">
             <h1>DKS Czarni Kozłowa Góra</h1>
             <img src="herb_dks.png" alt="Herb prawy" class="herb">
         </div>
-        <div class="menu-toggle" id="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="menu-wrapper">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Otwórz menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <p class="menu-label">Menu</p>
         </div>
-        <!-- Nawigacja -->
         <nav id="nav">
-            <!-- Przycisk do zamknięcia nawigacji -->
-            <button class="close-btn" id="close-btn">×</button>
-            <br>
+            <button class="close-btn" id="close-btn" aria-label="Zamknij menu">×</button>
             <ul>
                 <li><a href="terminarz.html">Terminarz</a></li>
                 <li><a href="tabela.html">Tabela</a></li>
@@ -262,7 +270,6 @@ header .logo img.herb {
                 <li><a href="galeria.html">Galeria</a></li>
             </ul>
         </nav>
-        <div class="current-page">Juniorzy</div>
     </header>
 
     <main>
@@ -300,17 +307,14 @@ header .logo img.herb {
     </footer>
 
     <script>
-        // Pobieranie elementów
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.getElementById('nav');
         const closeBtn = document.getElementById('close-btn');
 
-        // Funkcja otwierająca/zamykająca menu
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('show');
+            nav.classList.add('show');
         });
 
-        // Funkcja do zamknięcia menu po kliknięciu X
         closeBtn.addEventListener('click', () => {
             nav.classList.remove('show');
         });
