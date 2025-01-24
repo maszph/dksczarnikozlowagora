@@ -45,23 +45,25 @@
             background-color: black;
         }
 
+        /* Wysuwana nawigacja */
         nav {
             position: fixed;
             top: 0;
-            left: -200px; /* Initially hide the menu off the left side */
-            width: 200px;
-            height: 100%;
+            left: -250px; /* Początkowe położenie poza ekranem */
+            width: 250px;
+            height: auto;
             background-color: #333;
             color: white;
             padding: 20px;
-            transition: left 0.3s ease-in-out; /* Smooth animation for the slide-in effect */
+            transition: left 0.3s ease-in-out; /* Animacja przesuwania nawigacji */
             z-index: 1000;
         }
 
         nav.show {
-            left: 0; /* When the menu is shown, move it into view */
+            left: 0; /* Wysunięcie nawigacji na ekran */
         }
 
+        /* Przyciski w nawigacji */
         nav ul {
             list-style: none;
             padding: 0;
@@ -88,26 +90,79 @@
             border-radius: 5px;
         }
 
+        /* Przycisk zamknięcia (X) */
+        .close-btn {
+            font-size: 2em;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px; /* X po lewej stronie */
+        }
+
+        /* Ukrycie przycisku zamknięcia na mniejszych ekranach */
+        @media (max-width: 768px) {
+            .close-btn {
+                display: block; /* Pokazuje przycisk na małych ekranach */
+            }
+        }
+
+        /* Responsive layout for button-container */
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+            }
+
+            .button-container a {
+                width: auto; /* Make buttons adjust width based on text */
+                margin-bottom: 10px; /* Add spacing between buttons */
+            }
+        }
+
+        /* Przycisk w sekcji */
         .button-container {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin: 40px 0;
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
         }
 
         .button-container a {
             background-color: #c62828;
             color: white;
             text-decoration: none;
-            font-size: 1.5em;
-            padding: 15px 30px;
+            font-size: 1.2em;
+            padding: 15px 25px; /* Adjust padding to make buttons smaller */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
+            display: inline-block; /* Make button's width depend on the text */
+            text-align: center; /* Center the text within the button */
         }
 
         .button-container a:hover {
             background-color: #b71c1c;
+        }
+
+        nav ul li a img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        /* Style for the content and footer */
+        main {
+            padding: 20px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            color: black;
         }
 
         footer {
@@ -122,12 +177,21 @@
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            text-align: center;
+        }
+
+        footer .container div {
+            margin: 10px;
         }
 
         footer ul {
             list-style: none;
             padding: 0;
             margin: 10px 0;
+        }
+
+        footer ul li {
+            margin: 0;
         }
 
         footer ul li a {
@@ -157,19 +221,6 @@
             width: 20px;
             height: 20px;
         }
-
-        .current-page {
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        nav ul li a img {
-            width: 40px;
-            height: auto;
-            margin: 0 10px;
-        }
     </style>
 </head>
 <body>
@@ -184,6 +235,9 @@
         </div>
         <!-- Nawigacja -->
         <nav id="nav">
+            <!-- Przycisk do zamknięcia nawigacji -->
+            <button class="close-btn" id="close-btn">×</button>
+            <br>
             <ul>
                 <li><a href="terminarz.html">Terminarz</a></li>
                 <li><a href="tabela.html">Tabela</a></li>
@@ -204,6 +258,7 @@
             <a href="tabele_juniorow.html">Tabele Juniorów</a>
         </div>
     </main>
+    
 
     <footer>
         <div class="container">
@@ -234,10 +289,16 @@
         // Pobieranie elementów
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.getElementById('nav');
+        const closeBtn = document.getElementById('close-btn');
 
         // Funkcja otwierająca/zamykająca menu
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('show');
+        });
+
+        // Funkcja do zamknięcia menu po kliknięciu X
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('show');
         });
     </script>
 </body>
