@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabele - Juniorzy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #c62828;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+
+        nav ul li img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        footer {
+            background-color: #c62828;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        footer .container div {
+            margin: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            margin: 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-media a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .social-media a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .current-page {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #c62828;
+            color: white;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DKS Czarni Kozłowa Góra</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="juniorzy.html">Powrót</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="current-page">Tabele Juniorów</div>
+    </header>
+    <main>
+        <div class="table-container">
+            <h2>II Liga Wojewódzka A1 Junior "I" Grupa płn.</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lp.</th>
+                        <th>Drużyna</th>
+                        <th>M</th>
+                        <th>Pkt</th>
+                        <th>Z</th>
+                        <th>R</th>
+                        <th>P</th>
+                        <th>+/-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>KS SKRA CZĘSTOCHOWA S.A.</td><td>10</td><td>25</td><td>8</td><td>1</td><td>1</td><td>44:7</td></tr>
+                    <tr><td>2</td><td>LKS UNIA KOSZTOWY</td><td>10</td><td>23</td><td>7</td><td>2</td><td>1</td><td>33:6</td></tr>
+                    <tr><td>3</td><td>BKS SPARTA KATOWICE</td><td>10</td><td>23</td><td>7</td><td>2</td><td>1</td><td>39:14</td></tr>
+                    <tr><td>4</td><td>KS STADION ŚLĄSKI CHORZÓW III</td><td>10</td><td>22</td><td>7</td><td>1</td><td>2</td><td>37:14</td></tr>
+                    <tr><td>5</td><td>APN SIEMIANOWICE ŚLĄSKIE</td><td>10</td><td>19</td><td>6</td><td>1</td><td>3</td><td>25:15</td></tr>
+                    <tr><td>6</td><td>KS UNIA DĄBROWA GÓRNICZA</td><td>10</td><td>16</td><td>4</td><td>4</td><td>2</td><td>22:12</td></tr>
+                    <tr><td>7</td><td>DKS CZARNI KOZŁOWA GÓRA</td><td>10</td><td>10</td><td>3</td><td>1</td><td>6</td><td>34:29</td></tr>
+                    <tr><td>8</td><td>BYTOMSKI SPORT POLONIA BYTOM II</td><td>10</td><td>9</td><td>3</td><td>0</td><td>7</td><td>27:37</td></tr>
+                    <tr><td>9</td><td>UKS SZOPIENICE</td><td>10</td><td>6</td><td>2</td><td>0</td><td>8</td><td>13:42</td></tr>
+                    <tr><td>10</td><td>MLKS WOŹNIKI</td><td>10</td><td>3</td><td>1</td><td>0</td><td>9</td><td>6:55</td></tr>
+                    <tr><td>11</td><td>KS 1. FC KATOWICE</td><td>10</td><td>3</td><td>1</td><td>0</td><td>9</td><td>7:56</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h2>III Liga Wojewódzka A1 Junior "Bytom-Zabrze" Grupa 1</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lp.</th>
+                        <th>Drużyna</th>
+                        <th>M</th>
+                        <th>Pkt</th>
+                        <th>Z</th>
+                        <th>R</th>
+                        <th>P</th>
+                        <th>+/-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>DKS CZARNI II KOZŁOWA GÓRA</td><td>11</td><td>29</td><td>9</td><td>2</td><td>0</td><td>52:18</td></tr>
+                    <tr><td>2</td><td>LKS UNIA ŚWIERKLANIEC</td><td>12</td><td>22</td><td>7</td><td>1</td><td>4</td><td>36:26</td></tr>
+                    <tr><td>3</td><td>LKS ORZEŁ NAKŁO ŚLĄSKIE</td><td>11</td><td>17</td><td>5</td><td>2</td><td>4</td><td>27:20</td></tr>
+                    <tr><td>4</td><td>LKS PIAST OŻAROWICE</td><td>11</td><td>14</td><td>4</td><td>2</td><td>5</td><td>21:27</td></tr>
+                    <tr><td>5</td><td>TS SZOMBIERKI BYTOM</td><td>11</td><td>13</td><td>4</td><td>1</td><td>6</td><td>31:32</td></tr>
+                    <tr><td>6</td><td>ŁTS ŁABĘDY</td><td>10</td><td>13</td><td>4</td><td>1</td><td>5</td><td>23:26</td></tr>
+                    <tr><td>7</td><td>TS TARNOWICZANKA</td><td>12</td><td>2</td><td>0</td><td>2</td><td>10</td><td>10:51</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div>
+                <img src="herb_dks.png" alt="Logo klubu" style="width: 50px;">
+                <p>DKS Czarni Kozłowa Góra</p>
+            </div>
+            <div>
+                <p>Kontakt:</p>
+                <ul>
+                    <li>Email: <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a></li>
+                    <li>Telefon: +48 509 363 567</li>
+                </ul>
+            </div>
+            <div>
+                <p>Social Media:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/dksczarni" target="_blank"><img src="logo_fb.png" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/dksczarnikozlowagora" target="_blank"><img src="logo_ig.png" alt="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@dksczarnikozlowagora" target="_blank"><img src="logo_tiktok.png" alt="TikTok">TikTok</a>
+                    <a href="https://www.youtube.com/@dksczarni" target="_blank"><img src="logo_yt.png" alt="YouTube">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DKS Czarni Kozłowa Góra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #c62828;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+            header .logo h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+        h2 {
+            color: #c62828;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .match-schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .match .team {
+                font-weight: bold;
+            }
+
+            .match .date {
+                font-style: italic;
+            }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+                nav ul li {
+                    margin: 0 15px;
+                }
+
+                    nav ul li a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 1.2em;
+                        padding: 10px 20px;
+                        display: block;
+                    }
+
+                        nav ul li a:hover {
+                            background-color: #007BFF;
+                            border-radius: 5px;
+                        }
+
+                    nav ul li img {
+                        width: 40px;
+                        height: auto;
+                        margin: 0 10px;
+                    }
+
+        main {
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        section {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: none; /* Usunięcie efektu podświetlania */
+        }
+
+        .news-date {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            z-index: 2;
+        }
+
+        footer {
+            background-color: #c62828;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            footer .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+                footer .container div {
+                    margin: 10px;
+                }
+
+            footer ul {
+                list-style: none;
+                padding: 0;
+                margin: 10px 0;
+            }
+
+                footer ul li {
+                    margin: 0;
+                }
+
+            footer .social-media {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+                footer .social-media a {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: white;
+                    text-decoration: none;
+                }
+
+                    footer .social-media a img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+        /* Media queries dla responsywności */
+        @media screen and (max-width: 768px) {
+            header .logo h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+                nav ul li {
+                    margin: 10px 0;
+                }
+
+            .news-item {
+                padding: 15px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .social-media {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header .logo h1 {
+                font-size: 1.5em;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .news-item {
+                padding: 10px;
+            }
+
+            footer .social-media a {
+                font-size: 0.9em;
+            }
+        }
+
+        nav ul li a img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+        .current-page {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DKS Czarni Kozłowa Góra</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="terminarz.html">Terminarz</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="socialmedia.html">Social Media</a></li>
+                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
+                <li><a href="juniorzy.html">Juniorzy</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="current-page">Terminarz</div>
+    </header>
+
+    <main>
+        <section id="terminarz">
+            <h2>Terminarz</h2>
+            <div class="match-schedule">
+                <div class="match">
+                    <div class="team">PTS RODŁO GÓRNIKI vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">22 marca 2025, 15:30</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs KS STS CZARNI - SUCHA GÓRA</div>
+                    <div class="date">29 marca 2025, 16:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">LKS PIAST OŻAROWICE vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">5 kwietnia 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs TS GWAREK II TARNOWSKIE GÓRY</div>
+                    <div class="date">12 kwietnia 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">KS NITRON KRUPSKI MŁYN vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">19 kwietnia 2025, 13:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs KS ORKAN DĄBRÓWKA WIELKA</div>
+                    <div class="date">26 kwietnia 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">GKS ANDALUZJA PIEKARY ŚLĄSKIE vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">3 maja 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs TSPN NADZIEJA BYTOM</div>
+                    <div class="date">10 maja 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">KS ORZEŁ BIAŁY PIEKARY ŚLĄSKIE vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">17 maja 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs LKS TEMPO STOLARZOWICE</div>
+                    <div class="date">24 maja 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">LKS SOKÓŁ ORZECH vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">31 maja 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS CZARNI KOZŁOWA GÓRA vs TS TARNOWICZANKA</div>
+                    <div class="date">7 czerwca 2025, 17:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">UKS RUCH RADZIONKÓW vs DKS CZARNI KOZŁOWA GÓRA</div>
+                    <div class="date">15 czerwca 2025, 17:00</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <img src="herb_dks.png" alt="Logo klubu" style="width: 50px;">
+                <p>DKS Czarni Kozłowa Góra</p>
+            </div>
+            <div>
+                <p>Kontakt:</p>
+                <ul>
+                    <li>Email: <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a></li>
+                    <li>Telefon: +48 509 363 567</li>
+                </ul>
+            </div>
+            <div>
+                <p>Social Media:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/dksczarni" target="_blank"><img src="logo_fb.png" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/dksczarnikozlowagora?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="logo_ig.png" alt="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@dksczarnikozlowagora?is_from_webapp=1&sender_device=pc" target="_blank"><img src="logo_tiktok.png" alt="TikTok">TikTok</a>
+                    <a href="https://www.youtube.com/@dksczarni" target="_blank"><img src="logo_yt.png" alt="YouTube">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

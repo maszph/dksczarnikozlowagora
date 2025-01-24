@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najbliższe Mecze - Juniorzy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #c62828;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+
+        nav ul li img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        section {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #c62828;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .match-schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .match .team {
+            font-weight: bold;
+        }
+
+        .match .date {
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #c62828;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        footer .container div {
+            margin: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            margin: 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-media a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer .social-media a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .current-page {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DKS Czarni Kozłowa Góra</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="juniorzy.html">Powrót</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="current-page">Najbliższe Mecze</div>
+    </header>
+    <main>
+        <section>
+            <h2>Najbliższe Mecze</h2>
+            <div class="match-schedule">
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Sparta Katowice B1</div>
+                    <div class="date">12 stycznia, godzina 15:00</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Nadzieja Bytom (A Klasa seniorzy)</div>
+                    <div class="date">18/19 stycznia</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Unia Świerklaniec A1</div>
+                    <div class="date">25/26 stycznia</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Naprzód Świbie (B Klasa seniorzy)</div>
+                    <div class="date">1/2 lutego</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Stal Zabrze A1</div>
+                    <div class="date">8/9 lutego</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Stradom Częstochowa B1</div>
+                    <div class="date">15/16 lutego</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Górnik Bobrowniki II (B Klasa seniorzy)</div>
+                    <div class="date">22/23 lutego</div>
+                </div>
+                <div class="match">
+                    <div class="team">DKS Czarni Kozłowa Góra vs Górnik Wojkowice II (B Klasa seniorzy)</div>
+                    <div class="date">8/9 marca</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div>
+                <img src="herb_dks.png" alt="Logo klubu" style="width: 50px;">
+                <p>DKS Czarni Kozłowa Góra</p>
+            </div>
+            <div>
+                <p>Kontakt:</p>
+                <ul>
+                    <li>Email: <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a></li>
+                    <li>Telefon: +48 509 363 567</li>
+                </ul>
+            </div>
+            <div>
+                <p>Social Media:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/dksczarni" target="_blank"><img src="logo_fb.png" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/dksczarnikozlowagora" target="_blank"><img src="logo_ig.png" alt="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@dksczarnikozlowagora" target="_blank"><img src="logo_tiktok.png" alt="TikTok">TikTok</a>
+                    <a href="https://www.youtube.com/@dksczarni" target="_blank"><img src="logo_yt.png" alt="YouTube">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
