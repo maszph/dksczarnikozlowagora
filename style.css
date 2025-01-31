@@ -75,6 +75,10 @@ nav ul li img {
     position: relative;
 }
 
+.dropdown {
+    position: relative;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -89,19 +93,25 @@ nav ul li img {
     z-index: 1000;
 }
 
-    .dropdown-menu li {
-        padding: 10px;
+/* Rozwijanie na hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+    .dropdown-menu li a {
+        text-decoration: none;
+        color: white;
+        display: block;
     }
 
-        .dropdown-menu li a {
-            text-decoration: none;
-            color: white;
-            display: block;
+        .dropdown-menu li a:hover {
+            background-color: red;
         }
 
-            .dropdown-menu li a:hover {
-                background-color: red;
-            }
 
 /* Pokazanie podmenu po najechaniu */
 .dropdown:hover .dropdown-menu {
