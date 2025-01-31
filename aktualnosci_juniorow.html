@@ -14,9 +14,18 @@
             <h1>DKS Czarni Kozłowa Góra</h1>
             <img src="herb_dks.png" alt="Herb prawy" class="herb">
         </div>
+        <div class="menu-container">
+            <button class="menu-toggle">☰</button>
+        </div>        
         <nav>
             <ul>
-                <li><a href="juniorzy.html">Powrót</a></li>
+                <li><a href="terminarz.html">Terminarz i wyniki</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="socialmedia.html">Social Media</a></li>
+                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
+                <li><a href="juniorzy.html">Juniorzy</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
             </ul>
         </nav>
         <br>
@@ -164,5 +173,11 @@
             </div>
         </div>
     </footer>
+            <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            let menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
