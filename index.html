@@ -17,17 +17,24 @@
         <div class="menu-container">
             <button class="menu-toggle">☰</button>
         </div>        
-        <nav>
-            <ul>
-                <li><a href="terminarz.html">Terminarz i wyniki</a></li>
-                <li><a href="tabela.html">Tabela</a></li>
-                <li><a href="socialmedia.html">Social Media</a></li>
-                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
-                <li><a href="juniorzy.html">Juniorzy</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
+       <nav>
+    <ul>
+        <li><a href="terminarz.html">Terminarz i wyniki</a></li>
+        <li><a href="tabela.html">Tabela</a></li>
+        <li><a href="socialmedia.html">Social Media</a></li>
+        <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
+        <li class="dropdown">
+            <a href="juniorzy.html">Juniorzy</a>
+            <ul class="dropdown-menu">
+                <li><a href="najblizsze_mecze.html">Terminarz i wyniki</a></li>
+                <li><a href="aktualnosci_juniorow.html">Aktualności</a></li>
+                <li><a href="tabele_juniorow.html">Tabele</a></li>
             </ul>
-        </nav>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+</nav>
         <br>
         <div class="current-page">Aktualności</div>
     </header>
@@ -152,11 +159,21 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            let menu = document.querySelector('nav ul');
-            menu.classList.toggle('active');
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        let menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdown = document.querySelector(".dropdown > a");
+        dropdown.addEventListener("click", function (event) {
+            event.preventDefault(); // Zapobiega przejściu do strony
+            let menu = this.nextElementSibling;
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
         });
-    </script>
+    });
+</script>
 </body>
 </html>
