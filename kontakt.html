@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="herb_dks.png">
+    <title>Kontakt - DKS Czarni Kozłowa Góra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <div class="logo">
+            <img src="herb_dks.png" alt="Herb lewy" class="herb">
+            <h1>DKS Czarni Kozłowa Góra</h1>
+            <img src="herb_dks.png" alt="Herb prawy" class="herb">
+        </div>
+        <div class="menu-container">
+            <button class="menu-toggle">☰</button>
+        </div>        
+       <nav>
+            <ul>
+                <li><a href="terminarz.html">Terminarz i wyniki</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="socialmedia.html">Social Media</a></li>
+                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu DKS"></a></li>
+                <li class="dropdown">
+                    <a href="juniorzy.html" onclick="location.href=this.href">Juniorzy</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="najblizsze_mecze.html">Terminarz i wyniki</a></li>
+                        <li><a href="aktualnosci_juniorow.html">Aktualności</a></li>
+                        <li><a href="tabele_juniorow.html">Tabele</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="current-page">Kontakt</div>
+    </header>
+
+
+
+    <main>
+        <h2>Skontaktuj się z nami</h2>
+        <p>Jeśli masz pytania lub chcesz uzyskać więcej informacji, zapraszamy do kontaktu:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a></li>
+            <li><strong>Telefon:</strong> +48 509 363 567</li>
+            <li><strong>Adres:</strong> ul. Pokoju, 41-940 Piekary Śląskie</li>
+        </ul>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div>
+                <img src="herb_dks.png" alt="Logo klubu" style="width: 50px;">
+                <p>DKS Czarni Kozłowa Góra</p>
+            </div>
+            <div>
+                <p>Kontakt:</p>
+                    <a>Email: <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a></a><br>
+                    <a>Telefon: +48 509 363 567</a>
+            </div>
+            <div>
+                <p>Social Media:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/dksczarni" target="_blank"><img src="logo_fb.png" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/dksczarnikozlowagora" target="_blank"><img src="logo_ig.png" alt="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@dksczarnikozlowagora" target="_blank"><img src="logo_tiktok.png" alt="TikTok">TikTok</a>
+                    <a href="https://www.youtube.com/@dksczarni" target="_blank"><img src="logo_yt.png" alt="YouTube">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        let menu = document.querySelector('nav ul');
+        menu.classList.toggle('active');
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdown = document.querySelector(".dropdown > a");
+        dropdown.addEventListener("click", function (event) {
+            event.preventDefault(); // Zapobiega przejściu do strony
+            let menu = this.nextElementSibling;
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+</body>
+</html>
