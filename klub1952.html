@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="herb_dks.png">
-    <title>DKS Czarni Kozłowa Góra</title>
+    <title>Galeria Wydarzeń</title>
     <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<meta name="theme-color" content="#d32f2f">
-
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="herb_dks.png" alt="Herb lewy" class="herb">
@@ -25,12 +18,12 @@
         <div class="menu-container">
             <button class="menu-toggle">☰</button>
         </div>        
-     <nav>
+    <nav>
             <ul>
                 <li><a href="terminarz.html">Terminarz i wyniki</a></li>
                 <li><a href="tabela.html">Tabela</a></li>
                 <li><a href="sponsorzy.html">Partnerzy</a></li>
-                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
+                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu DKS"></a></li>
                 <li class="dropdown">
                     <a href="juniorzy.html" onclick="location.href=this.href">Juniorzy</a>
                     <ul class="dropdown-menu">
@@ -44,28 +37,11 @@
             </ul>
         </nav>
         <br>
-        <div class="current-page">Aktualności</div>
+        <div class="current-page">Klub 1952</div>
     </header>
 
     <main>
- <section id="news1" class="news-item">
-    <div class="news-date">5 Września 2025 | 15:30</div>
-    <br><br>
-    <h2>⚽️ Witamy na oficjalnej stronie DKS Czarni Kozłowa Góra ⚽️</h2>
-    <p>To tutaj znajdziecie wszystkie najważniejsze informacje o naszym klubie:</p>
-    <ul>
-        <li><b>Terminarz i wyniki</b> – aktualne mecze i rezultaty</li>
-        <li><b>Tabela</b> – bieżąca sytuacja w lidze</li>
-        <li><b>Partnerzy</b> – firmy i osoby wspierające Czarnych</li>
-        <li><b>Juniorzy</b> – informacje o drużynach młodzieżowych</li>
-        <li><b>Kontakt</b> – jak się z nami skontaktować</li>
-        <li><b>Klub 1952</b> – Projekt, który w najbliższej przyszłości wdrożymy w życie</li>
-    </ul>
-    <p>Śledźcie nas na bieżąco – wszystkie aktualności będą pojawiać się właśnie tutaj.</p>
-    <img src="powitanie.png" alt="Powitanie" style="width: 100%; border-radius: 10px; margin-top: 15px;">
-</section>
-
-
+        <h2>WKRÓTCE</h2>
     </main>
 
     <footer>
@@ -90,7 +66,8 @@
             </div>
         </div>
     </footer>
-<script>
+
+   <script>
     document.querySelector('.menu-toggle').addEventListener('click', function () {
         let menu = document.querySelector('nav ul');
         menu.classList.toggle('active');
@@ -106,7 +83,6 @@
         });
     });
 </script>
+
 </body>
 </html>
-
-
