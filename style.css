@@ -687,4 +687,12 @@ nav ul li img {
         background-size: cover; /* ucina ale wypełnia */
     }
 }
+.hero-image {
+  width: 100%;                   /* Pełna szerokość ekranu */
+  height: 250px;                 /* Stała wysokość */
+  background-image: url(slajd.png); /* Ścieżka do Twojego obrazka */
+  background-size: cover;        /* Obraz wypełnia szerokość, przycina górę/dół jeśli trzeba */
+  background-position: center;   /* Środek obrazu pozostaje widoczny */
+  background-repeat: no-repeat;  /* Obraz nie powtarza się */
+}
 
