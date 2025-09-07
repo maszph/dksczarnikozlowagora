@@ -667,4 +667,24 @@ nav ul li img {
     text-align: center;
   }
 }
+.page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/klub.jpg");
+    background-size: contain;   /* 📱 na tel całe zdjęcie */
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px) brightness(0.7);
+    z-index: 1;
+}
+
+/* 💻 tylko na większych ekranach – rozciągnięcie */
+@media (min-width: 768px) {
+    .page-hero .hero-background {
+        background-size: cover; /* ucina ale wypełnia */
+    }
+}
 
