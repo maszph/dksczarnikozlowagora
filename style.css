@@ -252,12 +252,10 @@ main {
 }
 
 .section {
-    flex: 1;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    margin-top: 2rem;
+    padding: 0;  
+    background: none;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -519,6 +517,154 @@ nav ul li img {
   }
   .sponsor small {
     font-size: 12px;
+  }
+}
+.section { margin-top: 2rem; }
+.fixture { padding: 0.75rem 1rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; margin-bottom: 0.75rem; }
+.fixture .teams { display: flex; gap: 0.5rem; align-items: center; font-weight: 600; }
+.fixture time { display: block; font-size: .9rem; opacity: .8; margin-top: .25rem; }
+.kadra {
+    margin: 20px 0;
+}
+
+.kadra h2 {
+    margin: 30px 0 15px;
+    color: #c62828;
+    border-bottom: 2px solid #c62828;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.player-card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.player-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.player-card .position {
+    font-weight: bold;
+    color: #c62828;
+    margin-bottom: 10px;
+}
+
+.player-card .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.95em;
+    color: #555;
+}
+.partners-sponsors {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Każda kolumna */
+.partners, .sponsors {
+    flex: 1;
+    max-width: 48%;
+}
+
+/* Tytuły */
+.partners h3, .sponsors h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c62828;
+    border-bottom: 2px solid #c62828;
+    padding-bottom: 5px;
+}
+
+/* Kafelek sponsora/partnera */
+.sponsor {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sponsor img.sponsor-logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* --- WERSJA MOBILNA --- */
+@media (max-width: 768px) {
+    .partners-sponsors {
+        flex-direction: column;
+        align-items: center; /* całość wyśrodkowana */
+    }
+
+    .sponsors {
+        order: 1; /* sponsorzy pierwsi */
+    }
+
+    .partners {
+        order: 2; /* partnerzy drudzy */
+    }
+
+    .partners, .sponsors {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* wyśrodkowanie zawartości */
+    }
+
+    .sponsor {
+        width: 100%;
+        max-width: 250px; /* opcjonalnie 300px jak chcesz większe kafelki */
+    }
+}
+@media (max-width: 768px) {
+  .sponsor {
+    width: 100%;
+    max-width: 300px; /* wszystkie sponsor tile mają tą samą szerokość */
+    margin: 20px auto; /* auto = wyśrodkowanie */
+    text-align: center;
+  }
+
+  .sponsor img.sponsor-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .sponsor p a {
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: center;
   }
 }
 
