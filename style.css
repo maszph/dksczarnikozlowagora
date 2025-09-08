@@ -695,3 +695,6 @@ nav ul li img {
         max-width: 100%;            /* usuwamy sztywny limit */
     }
 }
+footer .container > div:first-child {
+    text-align: center;
+}
