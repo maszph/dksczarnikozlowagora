@@ -378,7 +378,11 @@ main ul li { margin-bottom: 6px; }
 .league-table tbody tr:hover { background: rgba(198,40,40,0.12); }
 
 /* ── Kadra ── */
-.kadra { margin: 10px 0; }
+.kadra {
+  margin: 10px auto;
+  max-width: 1100px;
+  width: 100%;
+}
 .kadra h2 {
   font-family: var(--font-head);
   font-size: 1.5rem;
@@ -390,52 +394,65 @@ main ul li { margin-bottom: 6px; }
   padding-bottom: 8px;
   margin: 36px 0 20px;
 }
-.players { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
 
 .player-card {
-  flex: 1 1 190px;
-  max-width: 210px;
+  width: 210px;
+  max-width: 210px; /* kontrola wielkości */
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 14px;
+  padding: 12px;
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 210px;
 }
+
+
 .player-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(198,40,40,0.22);
   border-color: var(--red);
 }
+
 .player-card img {
   width: 100%;
-  height: 170px;
-  object-fit: cover;
+  aspect-ratio: 3/4;        /* KLUCZOWE – wszystkie zdjęcia mają ten sam format */
+  object-fit: cover;        /* przycina zamiast rozciągać */
   border-radius: 8px;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 8px;
 }
+
 .player-card h3 {
   font-family: var(--font-head);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 3px;
 }
+
 .player-card .position {
   font-family: var(--font-head);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--red);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
+
 .player-card .stats {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  font-size: 0.82rem;
+  gap: 2px;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
@@ -598,7 +615,10 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   nav ul li a { text-align: center; border-radius: 0; padding: 12px 20px; width: 100%; }
 
   .hero-image { height: 180px; }
-  .player-card { flex: 1 1 calc(50% - 10px); max-width: 100%; }
+  .player-card {
+  flex: 0 0 210px;
+  max-width: 210px;
+}
   .button-container { flex-direction: column; align-items: center; }
   .button-container a { width: 80%; max-width: 280px; }
   .match { flex-direction: column; align-items: flex-start; gap: 6px; }
