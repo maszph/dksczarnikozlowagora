@@ -45,9 +45,10 @@ header {
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
+/* Logo */
 header .logo {
   display: flex;
   align-items: center;
@@ -80,6 +81,8 @@ nav {
   background: rgba(0,0,0,0.65);
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 10; /* zabezpieczenie */
 }
 
 nav ul {
@@ -135,7 +138,7 @@ nav ul li img:hover { transform: scale(1.12); }
   padding: 6px 0;
   min-width: 200px;
   box-shadow: 0 10px 36px rgba(0,0,0,0.7);
-  z-index: 2000;
+  z-index: 99999; /* FIX */
 }
 .dropdown:hover .dropdown-menu { display: block; }
 
@@ -152,6 +155,23 @@ nav ul li img:hover { transform: scale(1.12); }
   color: var(--white);
 }
 
+/* ── Current Page Badge ── */
+.current-page {
+  position: relative;
+  z-index: 1; /* FIX – było 900 */
+  background: linear-gradient(90deg, var(--red-dark), var(--red));
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 32px;
+  display: inline-block;
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  margin: 10px auto;
+}
+
 /* ── Hero Image ── */
 .hero-image {
   width: 100%;
@@ -166,21 +186,6 @@ nav ul li img:hover { transform: scale(1.12); }
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, transparent 40%, var(--black) 100%);
-}
-
-/* ── Current Page Badge ── */
-.current-page {
-  background: linear-gradient(90deg, var(--red-dark), var(--red));
-  color: var(--white);
-  font-family: var(--font-head);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 9px 32px;
-  display: inline-block;
-  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
-  margin: 10px auto;
 }
 
 /* ── Main ── */
@@ -245,6 +250,8 @@ main ul li { margin-bottom: 6px; }
 .news-item p { color: #bbb; margin-bottom: 10px; }
 .news-item b { color: var(--white); }
 .news-item img { width: 100%; border-radius: 8px; margin-top: 16px; display: block; }
+
+/* reszta bez zmian */
 
 /* ── Buttons ── */
 .button-container {
