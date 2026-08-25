@@ -40,18 +40,13 @@
 
     <main>
         <section class="section">
-            <h2>Ostatnie Wyniki</h2>
-            <div class="match-schedule">
-                <div class="match"><div class="team">UKS Unia Strzybnica 4:3 DKS Czarni Kozłowa Góra</div><div class="date">9.11.2025, 10:00</div></div>
-                <div class="match"><div class="team">DKS Czarni Kozłowa Góra 3:4 LKS Jedność 32 Przyszowice</div><div class="date">25.10.2025, 11:00</div></div>
-                <div class="match"><div class="team">KS Zamkowiec Toszek 4:6 DKS Czarni Kozłowa Góra</div><div class="date">18.10.2025</div></div>
-                <div class="match"><div class="team">DKS Czarni Kozłowa Góra 2:2 TS Szombierki Bytom</div><div class="date">11.10.2025</div></div>
-                <div class="match"><div class="team">DKS Czarni Kozłowa Góra 5:3 ŁTS Łabędy</div><div class="date">8.10.2025</div></div>
-                <div class="match"><div class="team">KS Orkan Dąbrówka Wielka 0:2 DKS Czarni Kozłowa Góra</div><div class="date">5.10.2025</div></div>
-                <div class="match"><div class="team">DKS Czarni Kozłowa Góra 4:0 UKS Trampkarz 22 Zabrze</div><div class="date">27.09.2025</div></div>
-                <div class="match"><div class="team">LKS Unia Świerklaniec 0:4 DKS Czarni Kozłowa Góra</div><div class="date">21.09.2025</div></div>
-                <div class="match"><div class="team">LKS Orzeł Miedary 4:2 DKS Czarni Kozłowa Góra</div><div class="date">31.08.2025</div></div>
-            </div>
+            <h2>Terminarz – mecze Juniorów DKS</h2>
+            <div class="match-schedule" id="terminarz-j"></div>
+        </section>
+
+        <section class="section">
+            <h2>Ostatnie Wyniki – mecze Juniorów DKS</h2>
+            <div class="match-schedule" id="wyniki-j"></div>
         </section>
     </main>
 
@@ -85,12 +80,89 @@
         });
         document.addEventListener("DOMContentLoaded", function () {
             const dropdown = document.querySelector(".dropdown > a");
-            dropdown.addEventListener("click", function (event) {
-                event.preventDefault();
-                let menu = this.nextElementSibling;
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
-            });
+            if (dropdown) {
+                dropdown.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let menu = this.nextElementSibling;
+                    menu.style.display = menu.style.display === "block" ? "none" : "block";
+                });
+            }
         });
+
+        // Mecze Juniorów DKS
+        const matchesJ = [
+            { date: '2026-08-26', time: '11:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'MKS CONCORDIA KNURÓW', score: null },
+            { date: '2026-08-30', time: '10:00', home: 'KS BURZA BOROWA WIEŚ', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-06', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'UKS UNIA II STRZYBNICA', score: null },
+            { date: '2026-09-08', time: '17:30', home: 'GKS GWAREK ORNONTOWICE', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-13', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'GKS ANDALUZJA BRZOZOWICE - KAMIEŃ', score: null },
+            { date: '2026-09-20', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'UKS SOKÓŁ ZBROSŁAWICE', score: null },
+            { date: '2026-09-27', time: '10:00', home: 'GKS SZOMBIERKI BYTOM', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-10-04', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'MKS ZABORZE', score: null },
+            { date: '2026-10-10', time: '11:00', home: 'TS TARNOWICZANKA', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-10-18', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'TS ASY SPARTA ZABRZE', score: null },
+            { date: '2026-10-25', time: '10:00', home: 'KS MOSiR STAL ZABRZE', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-08', time: '10:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'KS BRASIL', score: null },
+            { date: '2026-11-15', time: '10:00', home: 'FUNDACJA MIŁOŚNIKÓW SPORTU KOLEJARZ', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null }
+        ];
+
+        function formatDate(dateStr) {
+            const [y, m, d] = dateStr.split('-');
+            const months = ['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
+            return `${parseInt(d)} ${months[parseInt(m)-1]} ${y}`;
+        }
+
+        function renderMatches(matches, terminarzId, wynikiId) {
+            const now = new Date();
+            now.setHours(0,0,0,0);
+            const terminarz = document.getElementById(terminarzId);
+            const wyniki = document.getElementById(wynikiId);
+            terminarz.innerHTML = '';
+            wyniki.innerHTML = '';
+
+            const upcoming = [];
+            const past = [];
+
+            matches.forEach(m => {
+                const matchDate = new Date(m.date + 'T00:00:00');
+                if (matchDate < now) {
+                    past.push(m);
+                } else {
+                    upcoming.push(m);
+                }
+            });
+
+            past.sort((a,b) => b.date.localeCompare(a.date));
+            upcoming.sort((a,b) => a.date.localeCompare(b.date));
+
+            if (upcoming.length === 0) {
+                terminarz.innerHTML = '<p style="color:#888;">Brak nadchodzących meczów.</p>';
+            } else {
+                upcoming.forEach(m => {
+                    const scoreText = m.score ? m.score : '–';
+                    const html = `<div class="match">
+                        <div class="team">${m.home}<br>${m.away}</div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} · ${scoreText}</div>
+                    </div>`;
+                    terminarz.insertAdjacentHTML('beforeend', html);
+                });
+            }
+
+            if (past.length === 0) {
+                wyniki.innerHTML = '<p style="color:#888;">Brak rozegranych meczów.</p>';
+            } else {
+                past.forEach(m => {
+                    const scoreText = m.score ? m.score : '–';
+                    const html = `<div class="match">
+                        <div class="team">${m.home}<br>${m.away}</div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} · <strong>${scoreText}</strong></div>
+                    </div>`;
+                    wyniki.insertAdjacentHTML('beforeend', html);
+                });
+            }
+        }
+
+        renderMatches(matchesJ, 'terminarz-j', 'wyniki-j');
     </script>
 </body>
 </html>

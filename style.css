@@ -631,3 +631,48 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   .player-card { flex: 1 1 100%; }
   .news-item { padding: 16px; }
 }
+/* ── Team Switcher / Tabs ── */
+.team-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.team-switcher button {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  border: 2px solid var(--red);
+  background: transparent;
+  color: var(--red);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.team-switcher button:hover {
+  transform: translateY(-2px);
+}
+.team-switcher button.active {
+  background: var(--red);
+  color: var(--white);
+}
+.team-panel {
+  display: none;
+}
+.team-panel.active {
+  display: block;
+}
+.highlight-row {
+  background: rgba(198,40,40,0.18) !important;
+  font-weight: 700;
+}
+.match.past {
+  opacity: 0.85;
+}
+#wyniki .match, .results-list .match {
+  border-left-color: #4caf50;
+}

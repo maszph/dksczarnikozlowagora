@@ -39,330 +39,111 @@
     </header>
 
     <main>
-        <section id="rozgrywki" class="section">
-            <h2>Tabela Ligowa</h2>
-            <div class="table-container">
-                <table class="league-table">
-  <thead>
-    <tr>
-      <th>Lp.</th>
-      <th>Herb</th>
-      <th>Drużyna</th>
-      <th>M</th>
-      <th>Pkt</th>
-      <th>Z</th>
-      <th>R</th>
-      <th>P</th>
-      <th>Bramki</th>
-      <th>+/-</th>
-    </tr>
-  </thead>
-  <tbody>
+        <div class="team-switcher">
+            <button class="active" data-team="1">1. Drużyna (Seniorzy)</button>
+            <button data-team="2">2. Drużyna (Rezerwy)</button>
+        </div>
 
-    <tr>
-      <td>1</td>
-      <td><img src="tarnowiczanka.png" width="30"></td>
-      <td>TS TARNOWICZANKA</td>
-      <td>21</td>
-      <td>48</td>
-      <td>15</td>
-      <td>3</td>
-      <td>3</td>
-      <td>70:24</td>
-      <td>46</td>
-    </tr>
+        <!-- ==================== DRUŻYNA 1 ==================== -->
+        <div id="team1" class="team-panel active">
+            <section class="section">
+                <h2>Tabela Ligowa – 1. Drużyna</h2>
+                <div class="table-container">
+                    <table class="league-table">
+                        <thead>
+                            <tr>
+                                <th>Lp.</th>
+                                <th>Drużyna</th>
+                                <th>M</th>
+                                <th>Pkt</th>
+                                <th>Z</th>
+                                <th>R</th>
+                                <th>P</th>
+                                <th>Bramki</th>
+                                <th>+/-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>LKS PRZYSZŁOŚĆ CHECHŁO NOWE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>2</td><td>TS GWAREK II TARNOWSKIE GÓRY</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>3</td><td>LKS TEMPO STOLARZOWICE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>4</td><td>GKS ROZBARK BYTOM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>5</td><td>LKS ORZEŁ II MIEDARY</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>6</td><td>LKS SOKÓŁ ORZECH</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>7</td><td>UKS SOKÓŁ ZBROSŁAWICE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>8</td><td>KS GÓRNIK II BOBROWNIKI ŚLĄSKIE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>9</td><td>KS STS CZARNI - SUCHA GÓRA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>10</td><td>LKS ORZEŁ NAKŁO ŚLĄSKIE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>11</td><td>GKS ANDALUZJA BRZOZOWICE - KAMIEŃ</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>12</td><td>KS NITRON KRUPSKI MŁYN</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>13</td><td>LKS PIAST OŻAROWICE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr class="highlight-row"><td>14</td><td>DKS CZARNI KOZŁOWA GÓRA ⚫</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <tr>
-      <td>2</td>
-      <td><img src="orzelbialy.png" width="30"></td>
-      <td>KS ORZEŁ BIAŁY BRZEZINY ŚLĄSKIE</td>
-      <td>21</td>
-      <td>45</td>
-      <td>14</td>
-      <td>3</td>
-      <td>4</td>
-      <td>62:23</td>
-      <td>39</td>
-    </tr>
+            <section class="section">
+                <h2>Terminarz – mecze DKS</h2>
+                <div class="match-schedule" id="terminarz-1"></div>
+            </section>
 
-    <tr>
-      <td>3</td>
-      <td><img src="rozbark.png" width="30"></td>
-      <td>GKS ROZBARK BYTOM</td>
-      <td>21</td>
-      <td>43</td>
-      <td>13</td>
-      <td>4</td>
-      <td>4</td>
-      <td>54:26</td>
-      <td>28</td>
-    </tr>
+            <section class="section">
+                <h2>Ostatnie Wyniki – mecze DKS</h2>
+                <div class="match-schedule" id="wyniki-1"></div>
+            </section>
+        </div>
 
-    <tr>
-      <td>4</td>
-      <td><img src="anda.png" width="30"></td>
-      <td>GKS ANDALUZJA BRZOZOWICE - KAMIEŃ</td>
-      <td>21</td>
-      <td>42</td>
-      <td>13</td>
-      <td>3</td>
-      <td>5</td>
-      <td>64:30</td>
-      <td>34</td>
-    </tr>
+        <!-- ==================== DRUŻYNA 2 ==================== -->
+        <div id="team2" class="team-panel">
+            <section class="section">
+                <h2>Tabela Ligowa – 2. Drużyna (Rezerwy)</h2>
+                <div class="table-container">
+                    <table class="league-table">
+                        <thead>
+                            <tr>
+                                <th>Lp.</th>
+                                <th>Drużyna</th>
+                                <th>M</th>
+                                <th>Pkt</th>
+                                <th>Z</th>
+                                <th>R</th>
+                                <th>P</th>
+                                <th>Bramki</th>
+                                <th>+/-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row"><td>1</td><td>DKS CZARNI II KOZŁOWA GÓRA ⚫</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>11:1</td><td>10</td></tr>
+                            <tr><td>2</td><td>LKS ŻYGLIN</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>7:2</td><td>5</td></tr>
+                            <tr><td>3</td><td>TSPN NADZIEJA BYTOM</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>6:1</td><td>5</td></tr>
+                            <tr><td>4</td><td>LKS UNIA ŚWIERKLANIEC</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>6:1</td><td>5</td></tr>
+                            <tr><td>5</td><td>GKS ROZBARK II BYTOM</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>5:3</td><td>2</td></tr>
+                            <tr><td>6</td><td>KS ORZEŁ BOBROWNIKI</td><td>1</td><td>3</td><td>1</td><td>0</td><td>0</td><td>3:1</td><td>2</td></tr>
+                            <tr><td>7</td><td>LKS TĘCZA ZENDEK</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>8</td><td>KS SILESIA II MIECHOWICE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>9</td><td>KS ORZEŁ BIAŁY II PIEKARY ŚLĄSKIE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0:0</td><td>0</td></tr>
+                            <tr><td>10</td><td>PTS RODŁO GÓRNIKI</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>3:5</td><td>-2</td></tr>
+                            <tr><td>11</td><td>LKS ISKRA POŁOMIA</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1:3</td><td>-2</td></tr>
+                            <tr><td>12</td><td>UKS UNIA II STRZYBNICA</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2:7</td><td>-5</td></tr>
+                            <tr><td>13</td><td>LKS ORZEŁ KOTY</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1:6</td><td>-5</td></tr>
+                            <tr><td>14</td><td>LKS NAPRZÓD WIESZOWA</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1:6</td><td>-5</td></tr>
+                            <tr><td>15</td><td>LKS ZGODA REPTY</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1:11</td><td>-10</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <tr>
-      <td>5</td>
-      <td><img src="herb_dks.png" width="30"></td>
-      <td>DKS CZARNI KOZŁOWA GÓRA</td>
-      <td>21</td>
-      <td>40</td>
-      <td>13</td>
-      <td>1</td>
-      <td>7</td>
-      <td>55:40</td>
-      <td>15</td>
-    </tr>
+            <section class="section">
+                <h2>Terminarz – mecze DKS II</h2>
+                <div class="match-schedule" id="terminarz-2"></div>
+            </section>
 
-    <tr>
-      <td>6</td>
-      <td><img src="czarnisucha.png" width="30"></td>
-      <td>KS STS CZARNI - SUCHA GÓRA</td>
-      <td>21</td>
-      <td>38</td>
-      <td>12</td>
-      <td>2</td>
-      <td>7</td>
-      <td>55:33</td>
-      <td>22</td>
-    </tr>
-
-    <tr>
-      <td>7</td>
-      <td><img src="ozarowice.png" width="30"></td>
-      <td>LKS PIAST OŻAROWICE</td>
-      <td>21</td>
-      <td>35</td>
-      <td>11</td>
-      <td>2</td>
-      <td>8</td>
-      <td>50:38</td>
-      <td>12</td>
-    </tr>
-
-    <tr>
-      <td>8</td>
-      <td><img src="gornik2bobrowniki.png" width="30"></td>
-      <td>KS GÓRNIK II BOBROWNIKI ŚLĄSKIE</td>
-      <td>21</td>
-      <td>27</td>
-      <td>8</td>
-      <td>3</td>
-      <td>10</td>
-      <td>30:50</td>
-      <td>-20</td>
-    </tr>
-
-    <tr>
-      <td>9</td>
-      <td><img src="sokolzbroslawice.png" width="30"></td>
-      <td>UKS SOKÓŁ ZBROSŁAWICE</td>
-      <td>20</td>
-      <td>25</td>
-      <td>8</td>
-      <td>1</td>
-      <td>11</td>
-      <td>31:34</td>
-      <td>-3</td>
-    </tr>
-
-    <tr>
-      <td>10</td>
-      <td><img src="nitron.png" width="30"></td>
-      <td>KS NITRON KRUPSKI MŁYN</td>
-      <td>19</td>
-      <td>23</td>
-      <td>6</td>
-      <td>5</td>
-      <td>8</td>
-      <td>35:31</td>
-      <td>4</td>
-    </tr>
-
-    <tr>
-      <td>11</td>
-      <td><img src="nadziejabytom.png" width="30"></td>
-      <td>TSPN NADZIEJA BYTOM</td>
-      <td>20</td>
-      <td>17</td>
-      <td>4</td>
-      <td>5</td>
-      <td>11</td>
-      <td>36:53</td>
-      <td>-17</td>
-    </tr>
-
-    <tr>
-      <td>12</td>
-      <td><img src="sokolorzech.png" width="30"></td>
-      <td>LKS SOKÓŁ ORZECH</td>
-      <td>21</td>
-      <td>16</td>
-      <td>5</td>
-      <td>1</td>
-      <td>15</td>
-      <td>28:73</td>
-      <td>-45</td>
-    </tr>
-
-    <tr>
-      <td>13</td>
-      <td><img src="orkan.png" width="30"></td>
-      <td>KS ORKAN DĄBRÓWKA WIELKA</td>
-      <td>21</td>
-      <td>11</td>
-      <td>3</td>
-      <td>2</td>
-      <td>16</td>
-      <td>22:67</td>
-      <td>-45</td>
-    </tr>
-
-    <tr>
-      <td>14</td>
-      <td><img src="rodlogorniki.png" width="30"></td>
-      <td>PTS RODŁO GÓRNIKI</td>
-      <td>21</td>
-      <td>6</td>
-      <td>1</td>
-      <td>3</td>
-      <td>17</td>
-      <td>16:86</td>
-      <td>-70</td>
-    </tr>
-
-  </tbody>
-</table>
-            </div>
-
-            <div class="content">
-                <section class="section" id="terminarz" style="flex:1;">
-                    <h2>Terminarz</h2>
-                    <div class="match-schedule">
-
-<div class="match">
-  <div class="team">GKS ROZBARK BYTOM<br>
-    DKS CZARNI KOZŁOWA GÓRA</div>
-  <div class="date">16 Maja 2026, 17:00</div>
-</div>
-
-<div class="match">
-  <div class="team">DKS CZARNI KOZŁOWA GÓRA<br>
-    PTS RODŁO GÓRNIKI</div>
-  <div class="date">23 Maja 2026, 15:00</div>
-</div>
-
-<div class="match">
-  <div class="team">UKS SOKÓŁ ZBROSŁAWICE<br>
-    DKS CZARNI KOZŁOWA GÓRA</div>
-  <div class="date">30 Maja 2026, 17:00</div>
-</div>
-
-<div class="match">
-  <div class="team">DKS CZARNI KOZŁOWA GÓRA<br>
-    LKS PIAST OŻAROWICE</div>
-  <div class="date">06 Czerwca 2026, 15:00</div>
-</div>
-
-<div class="match">
-  <div class="team">KS STS CZARNI - SUCHA GÓRA<br>
-    DKS CZARNI KOZŁOWA GÓRA</div>
-  <div class="date">14 Czerwca 2026, 17:00</div>
-</div>
-                </section>
-
-                </section>
-   <!-- <div id="terminarz">
-      <h3>Terminarz</h3>
-      <div class="match-schedule">
-  <div class="match">
-    <div class="team">DKS CZARNI KOZŁOWA GÓRA<br>
-        KS STS CZARNI - SUCHA GÓRA</div>
-    <div class="date">15 Listopada 2025, 13:00</div>
-  </div>
-  </div>-->
-
-<br>
-    <div id="wyniki">
-      <h2>Ostatnie Wyniki</h2>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:4 KS ORZEŁ BIAŁY BRZEZINY ŚLĄSKIE</strong><br>
-<small>18 kwietnia 2026</small></p>
-
-      <p><strong>KS DĄBRÓWKA WIELKA 0:5 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-<small>18 kwietnia 2026</small></p>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 6:1 LKS SOKÓŁ ORZECH</strong><br>
-<small>18 kwietnia 2026</small></p>
-
-      <p><strong>TSPN NADZIEJA BYTOM 1:6 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-<small>11 kwietnia 2026</small></p>
-      
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 1:3 TS TARNOWICZANKA</strong><br>
-<small>4 kwietnia 2026</small></p>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:1 KS GÓRNIK II BOBROWNIKI ŚLĄSKIE</strong><br>
-<small>21 marca 2026</small></p>
-
-<p><strong>GKS ANDALUZJA BRZOZOWICE-KAMIEŃ 1:1 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-<small>14 marca 2026</small></p>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:0* KS NITRON KRUPSKI MŁYN</strong><br>
-<small>14 marca 2026 *Walkower, mecz zakończył się wynikiem 2:2*</small></p>
-
-        <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:1 KS STS CZARNI SUCHA GÓRA</strong><br>
-     <small>15 listopada</small></p>
-        
-        <p><strong>LKS PIAST OŻAROWICE 4:0 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>11 listopada 2025</small></p>
-        
-        <p><strong>DKS CZARNI KOZŁOWA GÓRA 4:0 UKS SOKÓŁ ZBROSŁAWICE</strong><br>
-     <small>8 listopada 2025</small></p>
-
-      <p><strong>PTS RODŁO GÓRNIKI 1:3 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>26 października 2025</small></p>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 1:4 GKS ROZBARK BYTOM</strong><br>
-     <small>18 października 2025</small></p>
-
-     <p><strong>KS ORZEŁ BIAŁY BRZEZINY ŚLĄSKIE 5:0 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>4 października 2025</small></p>
-
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:0 KS ORKAN DĄBRÓWKA WIELKA</strong><br>
-     <small>4 października 2025</small></p>
-
-      <p><strong>LKS SOKÓŁ ORZECH 2:3 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>27 września 2025</small></p>
-      
-      <p><strong>DKS CZARNI KOZŁOWA GÓRA 3:2 TSPN NADZIEJA BYTOM</strong><br>
-     <small>20 września 2025</small></p>
-
-      <p><strong>TS TARNOWICZANKA TARNOWSKIE GÓRY 1–3 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>13 września 2025</small></p>
-
-      <p><strong>KS GÓRNIK II BOBROWNIKI ŚLĄSKIE 2–1 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>3 września 2025</small></p>
-
-  <p><strong>DKS CZARNI KOZŁOWA GÓRA 0–5 GKS ANDALUZJA PIEKARY ŚLĄSKIE</strong><br>
-     <small>31 sierpnia 2025</small></p>
-
-     <p><strong>KS NITRON KRUPSKI MŁYN 2–3 DKS CZARNI KOZŁOWA GÓRA</strong><br>
-     <small>23 sierpnia 2025</small></p>
-
-     </div>
-</section>
-            </div>
-        </section>
+            <section class="section">
+                <h2>Ostatnie Wyniki – mecze DKS II</h2>
+                <div class="match-schedule" id="wyniki-2"></div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -390,17 +171,127 @@
     </footer>
 
     <script>
+        // Menu mobile
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('nav ul').classList.toggle('active');
         });
         document.addEventListener("DOMContentLoaded", function () {
             const dropdown = document.querySelector(".dropdown > a");
-            dropdown.addEventListener("click", function (event) {
-                event.preventDefault();
-                let menu = this.nextElementSibling;
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            if (dropdown) {
+                dropdown.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let menu = this.nextElementSibling;
+                    menu.style.display = menu.style.display === "block" ? "none" : "block";
+                });
+            }
+        });
+
+        // Team switcher
+        document.querySelectorAll('.team-switcher button').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.team-switcher button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById('team' + this.dataset.team).classList.add('active');
             });
         });
+
+        // ===== DANE MECZÓW 1. DRUŻYNY =====
+        const matches1 = [
+            { date: '2026-08-30', time: '11:00', home: 'KS GÓRNIK II BOBROWNIKI ŚLĄSKIE', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-05', time: '11:00', home: 'LKS PRZYSZŁOŚĆ CHECHŁO NOWE', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-12', time: '15:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'UKS SOKÓŁ ZBROSŁAWICE', score: null },
+            { date: '2026-09-19', time: '16:00', home: 'TS GWAREK II TARNOWSKIE GÓRY', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-26', time: '15:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'LKS TEMPO STOLARZOWICE', score: null },
+            { date: '2026-10-03', time: '15:00', home: 'LKS PIAST OŻAROWICE', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-10-10', time: '15:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'LKS ORZEŁ II MIEDARY', score: null },
+            { date: '2026-10-17', time: '15:00', home: 'GKS ROZBARK BYTOM', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-10-24', time: '14:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'LKS SOKÓŁ ORZECH', score: null },
+            { date: '2026-10-31', time: '14:00', home: 'KS STS CZARNI - SUCHA GÓRA', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-07', time: '14:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'LKS ORZEŁ NAKŁO ŚLĄSKIE', score: null },
+            { date: '2026-11-11', time: '11:00', home: 'GKS ANDALUZJA BRZOZOWICE - KAMIEŃ', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-14', time: '13:30', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'KS NITRON KRUPSKI MŁYN', score: null }
+        ];
+
+        // ===== DANE MECZÓW 2. DRUŻYNY =====
+        const matches2 = [
+            { date: '2026-08-23', time: '15:00', home: 'LKS ZGODA REPTY', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: '1:11' },
+            { date: '2026-08-29', time: '15:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'KS SILESIA II MIECHOWICE', score: null },
+            { date: '2026-09-05', time: '16:00', home: 'KS ORZEŁ BIAŁY II PIEKARY ŚLĄSKIE', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-12', time: '16:00', home: 'PTS RODŁO GÓRNIKI', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-09-20', time: '15:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'LKS ISKRA POŁOMIA', score: null },
+            { date: '2026-09-26', time: '16:00', home: 'UKS UNIA II STRZYBNICA', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-10-04', time: '15:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'TSPN NADZIEJA BYTOM', score: null },
+            { date: '2026-10-18', time: '15:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'LKS ORZEŁ KOTY', score: null },
+            { date: '2026-10-24', time: '14:00', home: 'GKS ROZBARK II BYTOM', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-01', time: '14:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'LKS UNIA ŚWIERKLANIEC', score: null },
+            { date: '2026-11-07', time: '14:00', home: 'LKS TĘCZA ZENDEK', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-11', time: '11:00', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'LKS NAPRZÓD WIESZOWA', score: null },
+            { date: '2026-11-14', time: '13:30', home: 'LKS ŻYGLIN', away: 'DKS CZARNI II KOZŁOWA GÓRA', score: null },
+            { date: '2026-11-22', time: '13:30', home: 'DKS CZARNI II KOZŁOWA GÓRA', away: 'KS ORZEŁ BOBROWNIKI', score: null }
+        ];
+
+        function formatDate(dateStr) {
+            const [y, m, d] = dateStr.split('-');
+            const months = ['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
+            return `${parseInt(d)} ${months[parseInt(m)-1]} ${y}`;
+        }
+
+        function renderMatches(matches, terminarzId, wynikiId) {
+            const now = new Date();
+            now.setHours(0,0,0,0);
+            const terminarz = document.getElementById(terminarzId);
+            const wyniki = document.getElementById(wynikiId);
+            terminarz.innerHTML = '';
+            wyniki.innerHTML = '';
+
+            const upcoming = [];
+            const past = [];
+
+            matches.forEach(m => {
+                const matchDate = new Date(m.date + 'T00:00:00');
+                if (matchDate < now) {
+                    past.push(m);
+                } else {
+                    upcoming.push(m);
+                }
+            });
+
+            // Sort past newest first
+            past.sort((a,b) => b.date.localeCompare(a.date));
+            // Upcoming chronological
+            upcoming.sort((a,b) => a.date.localeCompare(b.date));
+
+            if (upcoming.length === 0) {
+                terminarz.innerHTML = '<p style="color:#888;">Brak nadchodzących meczów.</p>';
+            } else {
+                upcoming.forEach(m => {
+                    const scoreText = m.score ? m.score : '–';
+                    const html = `<div class="match">
+                        <div class="team">${m.home}<br>${m.away}</div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} · ${scoreText}</div>
+                    </div>`;
+                    terminarz.insertAdjacentHTML('beforeend', html);
+                });
+            }
+
+            if (past.length === 0) {
+                wyniki.innerHTML = '<p style="color:#888;">Brak rozegranych meczów.</p>';
+            } else {
+                past.forEach(m => {
+                    const scoreText = m.score ? m.score : '–';
+                    const html = `<div class="match">
+                        <div class="team">${m.home}<br>${m.away}</div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} · <strong>${scoreText}</strong></div>
+                    </div>`;
+                    wyniki.insertAdjacentHTML('beforeend', html);
+                });
+            }
+        }
+
+        // Render both teams
+        renderMatches(matches1, 'terminarz-1', 'wyniki-1');
+        renderMatches(matches2, 'terminarz-2', 'wyniki-2');
     </script>
 </body>
 </html>
