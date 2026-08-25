@@ -40,12 +40,12 @@
 
     <main>
         <section class="section">
-            <h2>Terminarz – mecze Juniorów DKS</h2>
+            <h2>Terminarz – mecze Czarnych</h2>
             <div class="match-schedule" id="terminarz-j"></div>
         </section>
 
         <section class="section">
-            <h2>Ostatnie Wyniki – mecze Juniorów DKS</h2>
+            <h2>Ostatnie Wyniki – mecze Czarnych</h2>
             <div class="match-schedule" id="wyniki-j"></div>
         </section>
     </main>
@@ -89,7 +89,6 @@
             }
         });
 
-        // Mecze Juniorów DKS
         const matchesJ = [
             { date: '2026-08-26', time: '11:00', home: 'DKS CZARNI KOZŁOWA GÓRA', away: 'MKS CONCORDIA KNURÓW', score: null },
             { date: '2026-08-30', time: '10:00', home: 'KS BURZA BOROWA WIEŚ', away: 'DKS CZARNI KOZŁOWA GÓRA', score: null },
@@ -125,11 +124,8 @@
 
             matches.forEach(m => {
                 const matchDate = new Date(m.date + 'T00:00:00');
-                if (matchDate < now) {
-                    past.push(m);
-                } else {
-                    upcoming.push(m);
-                }
+                if (matchDate < now) past.push(m);
+                else upcoming.push(m);
             });
 
             past.sort((a,b) => b.date.localeCompare(a.date));
@@ -139,10 +135,12 @@
                 terminarz.innerHTML = '<p style="color:#888;">Brak nadchodzących meczów.</p>';
             } else {
                 upcoming.forEach(m => {
-                    const scoreText = m.score ? m.score : '–';
+                    const scoreHtml = m.score
+                        ? `<span class="score">${m.score}</span>`
+                        : `<span class="score pending">–</span>`;
                     const html = `<div class="match">
                         <div class="team">${m.home}<br>${m.away}</div>
-                        <div class="date">${formatDate(m.date)}, ${m.time} · ${scoreText}</div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} ${scoreHtml}</div>
                     </div>`;
                     terminarz.insertAdjacentHTML('beforeend', html);
                 });
@@ -152,10 +150,12 @@
                 wyniki.innerHTML = '<p style="color:#888;">Brak rozegranych meczów.</p>';
             } else {
                 past.forEach(m => {
-                    const scoreText = m.score ? m.score : '–';
+                    const scoreHtml = m.score
+                        ? `<span class="score">${m.score}</span>`
+                        : `<span class="score pending">–</span>`;
                     const html = `<div class="match">
                         <div class="team">${m.home}<br>${m.away}</div>
-                        <div class="date">${formatDate(m.date)}, ${m.time} · <strong>${scoreText}</strong></div>
+                        <div class="date">${formatDate(m.date)}, ${m.time} ${scoreHtml}</div>
                     </div>`;
                     wyniki.insertAdjacentHTML('beforeend', html);
                 });
