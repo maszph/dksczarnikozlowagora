@@ -684,3 +684,104 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   .player-card { flex: 1 1 100%; }
   .news-item { padding: 16px; }
 }
+
+/* ── Statystyki ── */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 12px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.stat-card:hover {
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+.stat-card .value {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+}
+.stat-card .label {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.stat-card.highlight .value { color: var(--red); }
+
+.rankings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .rankings { grid-template-columns: 1fr; }
+}
+.ranking-box h3 {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.ranking-table th {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #aaa;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.ranking-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  color: #ccc;
+}
+.ranking-table tr:hover td { background: rgba(198,40,40,0.1); }
+.ranking-table .pos {
+  font-family: var(--font-head);
+  font-weight: 900;
+  color: var(--red);
+  width: 36px;
+}
+.ranking-table .name { color: var(--white); font-weight: 700; }
+.ranking-table .num {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--white);
+  text-align: right;
+}
+.loading-msg, .error-msg {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.error-msg { color: #e57373; }

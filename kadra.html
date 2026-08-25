@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="herb_dks.png">
-    <title>Kadra seniorów – DKS Czarni Kozłowa Góra</title>
+    <title>Statystyki – DKS Czarni Kozłowa Góra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="kadra.html">Kadra</a></li>
+                <li><a href="kadra.html">Statystyki</a></li>
                 <li><a href="tabela.html">Rozgrywki</a></li>
                 <li><a href="sponsorzy.html">Partnerzy</a></li>
                 <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
@@ -35,85 +35,57 @@
                 <li><a href="klub1952.html">Klub 1952</a></li>
             </ul>
         </nav>
-        <div class="current-page">Kadra seniorów</div>
+        <div class="current-page">Statystyki</div>
     </header>
 
-      <main>
-    <section class="kadra">
-    <h2>Bramkarze</h2>
-    <div class="players">
-        <div class="player-card">
-            <img src="kocent.png" alt="Patryk Kocent">
-            <h3>Patryk Kocent</h3>
-            <p class="position">Bramkarz</p>
-            <div class="stats">
-                <span>Mecze: 20</span>
-                <span>Czyste konta: 4</span>
+    <main>
+        <div class="team-switcher">
+            <button class="active" data-team="1">1. Drużyna</button>
+            <button data-team="2">2. Drużyna</button>
+        </div>
+
+        <!-- ==================== 1. DRUŻYNA ==================== -->
+        <div id="team1" class="team-panel active">
+            <section class="section">
+                <h2>Podsumowanie – 1. Drużyna</h2>
+                <div class="stats-summary" id="summary-1">
+                    <div class="loading-msg">Ładowanie danych…</div>
+                </div>
+            </section>
+
+            <div class="rankings">
+                <div class="ranking-box">
+                    <h3>⚽ Najlepsi strzelcy</h3>
+                    <div id="scorers-1"><div class="loading-msg">Ładowanie…</div></div>
+                </div>
+                <div class="ranking-box">
+                    <h3>🎯 Najlepsi asystenci</h3>
+                    <div id="assists-1"><div class="loading-msg">Ładowanie…</div></div>
+                </div>
             </div>
         </div>
-        <div class="player-card">
-            <img src="oledzki.png" alt="Paweł Olędzki">
-            <h3>Paweł Olędzki</h3>
-            <p class="position">Bramkarz</p>
-            <div class="stats">
-                <span>Mecze: 1</span>
-                <span>Czyste konta: 0</span>
+
+        <!-- ==================== 2. DRUŻYNA ==================== -->
+        <div id="team2" class="team-panel">
+            <section class="section">
+                <h2>Podsumowanie – 2. Drużyna</h2>
+                <div class="stats-summary" id="summary-2">
+                    <div class="loading-msg">Ładowanie danych…</div>
+                </div>
+            </section>
+
+            <div class="rankings">
+                <div class="ranking-box">
+                    <h3>⚽ Najlepsi strzelcy</h3>
+                    <div id="scorers-2"><div class="loading-msg">Ładowanie…</div></div>
+                </div>
+                <div class="ranking-box">
+                    <h3>🎯 Najlepsi asystenci</h3>
+                    <div id="assists-2"><div class="loading-msg">Ładowanie…</div></div>
+                </div>
             </div>
         </div>
-        <div class="player-card">
-            <img src="garcarczyk.png" alt="Damian Garcarczyk">
-            <h3>Damian Garcarczyk</h3>
-            <p class="position">Bramkarz</p>
-            <div class="stats">
-                <span>Mecze: 2</span>
-                <span>Czyste konta: 2</span>
-            </div>
-        </div>
-    </div>
-
-    <h2>Obrońcy</h2>
-    <div class="players">
-        <div class="player-card"><img src="fritsch.png" alt="Damian Fritsch"><h3>Damian Fritsch</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 12</span><span>Gole: 1</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="finka.png" alt="Sebastian Finka"><h3>Sebastian Finka</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 6</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="gorecki.png" alt="Filip Górecki"><h3>Filip Górecki</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 1</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="janus.png" alt="Kacper Janus"><h3>Kacper Janus</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 5</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="klimczok.png" alt="Miłosz Klimczok"><h3>Miłosz Klimczok</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 14</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="kwasniewski.png" alt="Tomasz Kwaśniewski"><h3>Tomasz Kwaśniewski</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 18</span><span>Gole: 0</span><span>Asysty: 2</span></div></div>
-        <div class="player-card"><img src="niewiadomski.png" alt="Jan Niewiadomski"><h3>Jan Niewiadomski</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 13</span><span>Gole: 2</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="gliklich.png" alt="Michał Gliklich"><h3>Michał Gliklich</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 15</span><span>Gole: 4</span><span>Asysty: 2</span></div></div>
-        <div class="player-card"><img src="kajca.png" alt="Oskar Kajca"><h3>Oskar Kajca</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 3</span><span>Gole: 1</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="dyszy.png" alt="Kacper Dyszy"><h3>Kacper Dyszy</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 5</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="nierada.png" alt="Szymon Nierada"><h3>Szymon Nierada</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 0</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="duda.png" alt="Janusz Duda"><h3>Janusz Duda</h3><p class="position">Obrońca</p><div class="stats"><span>Mecze: 4</span><span>Gole: 2</span><span>Asysty: 0</span></div></div>
-    </div>
-
-    <h2>Pomocnicy</h2>
-    <div class="players">
-        <div class="player-card"><img src="cichy.png" alt="Aleksander Cichy"><h3>Aleksander Cichy</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 21</span><span>Gole: 2</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="dikta.png" alt="Seweryn Dikta"><h3>Seweryn Dikta</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 14</span><span>Gole: 5</span><span>Asysty: 3</span></div></div>
-        <div class="player-card"><img src="dramski.png" alt="Artur Dramski"><h3>Artur Dramski</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 20</span><span>Gole: 2</span><span>Asysty: 6</span></div></div>
-        <div class="player-card"><img src="eliasz.png" alt="Mateusz Eliasz"><h3>Mateusz Eliasz</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 12</span><span>Gole: 1</span><span>Asysty: 1</span></div></div>
-        <div class="player-card"><img src="guldzinski.png" alt="Mateusz Guldziński"><h3>Mateusz Guldziński</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 2</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="iwanowski.png" alt="Paweł Iwanowski"><h3>Paweł Iwanowski</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 15</span><span>Gole: 1</span><span>Asysty: 4</span></div></div>
-        <div class="player-card"><img src="joszki.png" alt="Michał Joszki"><h3>Michał Joszki</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 2</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="kus.png" alt="Piotr Kuś"><h3>Piotr Kuś</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 15</span><span>Gole: 1</span><span>Asysty: 2</span></div></div>
-        <div class="player-card"><img src="sprot.png" alt="Sebastian Sprot"><h3>Sebastian Sprot</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 16</span><span>Gole: 2</span><span>Asysty: 5</span></div></div>
-        <div class="player-card"><img src="skutela.png" alt="Grzegorz Skutela"><h3>Grzegorz Skutela</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 21</span><span>Gole: 2</span><span>Asysty: 2</span></div></div>
-        <div class="player-card"><img src="wojtacha.png" alt="Sławomir Wojtacha"><h3>Sławomir Wojtacha</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 11</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="maciejewski.png" alt="Jakub Maciejewski"><h3>Jakub Maciejewski</h3><p class="position">Pomocnik</p><div class="stats"><span>Mecze: 3</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-    </div>
-
-    <h2>Napastnicy</h2>
-    <div class="players">
-        <div class="player-card"><img src="kurzac.png" alt="Denis Kurzac"><h3>Denis Kurzac</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 11</span><span>Gole: 0</span><span>Asysty: 1</span></div></div>
-        <div class="player-card"><img src="skowronek.png" alt="Jakub Skowronek"><h3>Jakub Skowronek</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 15</span><span>Gole: 9</span><span>Asysty: 4</span></div></div>
-        <div class="player-card"><img src="surowiec.png" alt="Marcin Surowiec"><h3>Marcin Surowiec</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 17</span><span>Gole: 12</span><span>Asysty: 3</span></div></div>
-        <div class="player-card"><img src="materna.png" alt="Mateusz Materna"><h3>Mateusz Materna</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 8</span><span>Gole: 3</span><span>Asysty: 1</span></div></div>
-        <div class="player-card"><img src="zieba.png" alt="Wiktor Zięba"><h3>Wiktor Zięba</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 0</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-        <div class="player-card"><img src="wawrzyniak.png" alt="Karol Wawrzyniak"><h3>Karol Wawrzyniak</h3><p class="position">Napastnik</p><div class="stats"><span>Mecze: 0</span><span>Gole: 0</span><span>Asysty: 0</span></div></div>
-    </div>
-</section>
-</main>
+    </main>
 
     <footer>
         <div class="container">
@@ -140,17 +112,127 @@
     </footer>
 
     <script>
+        // Menu
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('nav ul').classList.toggle('active');
         });
         document.addEventListener("DOMContentLoaded", function () {
             const dropdown = document.querySelector(".dropdown > a");
-            dropdown.addEventListener("click", function (event) {
-                event.preventDefault();
-                let menu = this.nextElementSibling;
-                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            if (dropdown) {
+                dropdown.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let menu = this.nextElementSibling;
+                    menu.style.display = menu.style.display === "block" ? "none" : "block";
+                });
+            }
+        });
+
+        // Team switcher
+        document.querySelectorAll('.team-switcher button').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.team-switcher button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById('team' + this.dataset.team).classList.add('active');
             });
         });
+
+        // ===== GOOGLE SHEETS URLS =====
+        const URLS = {
+            players1: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=0&single=true&output=csv',
+            players2: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=789137830&single=true&output=csv',
+            summary1: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1641109961&single=true&output=csv',
+            summary2: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1892556878&single=true&output=csv'
+        };
+
+        // Prosty parser CSV
+        function parseCSV(text) {
+            const lines = text.trim().split(/\r?\n/);
+            if (lines.length < 2) return [];
+            const headers = lines[0].split(',').map(h => h.trim());
+            return lines.slice(1).map(line => {
+                const cols = line.split(',');
+                const obj = {};
+                headers.forEach((h, i) => {
+                    obj[h] = (cols[i] || '').trim();
+                });
+                return obj;
+            }).filter(row => row['Zawodnik'] || row['Mecze']);
+        }
+
+        function renderSummary(data, containerId) {
+            const el = document.getElementById(containerId);
+            if (!data || data.length === 0) {
+                el.innerHTML = '<div class="error-msg">Brak danych podsumowania</div>';
+                return;
+            }
+            const s = data[0];
+            el.innerHTML = `
+                <div class="stat-card"><div class="value">${s['Mecze'] || 0}</div><div class="label">Mecze</div></div>
+                <div class="stat-card highlight"><div class="value">${s['Zwycięstwa'] || 0}</div><div class="label">Zwycięstwa</div></div>
+                <div class="stat-card"><div class="value">${s['Remisy'] || 0}</div><div class="label">Remisy</div></div>
+                <div class="stat-card"><div class="value">${s['Porażki'] || 0}</div><div class="label">Porażki</div></div>
+                <div class="stat-card highlight"><div class="value">${s['Bramki strzelone'] || 0}</div><div class="label">Bramki strzelone</div></div>
+                <div class="stat-card"><div class="value">${s['Bramki stracone'] || 0}</div><div class="label">Bramki stracone</div></div>
+            `;
+        }
+
+        function renderRanking(players, key, containerId, limit = 10) {
+            const el = document.getElementById(containerId);
+            const sorted = players
+                .map(p => ({ name: p['Zawodnik'], value: parseInt(p[key]) || 0, matches: parseInt(p['Mecze']) || 0 }))
+                .filter(p => p.value > 0)
+                .sort((a, b) => b.value - a.value || b.matches - a.matches)
+                .slice(0, limit);
+
+            if (sorted.length === 0) {
+                el.innerHTML = '<p style="color:#888;padding:12px 0;">Brak danych (wszyscy mają 0)</p>';
+                return;
+            }
+
+            let html = `<table class="ranking-table">
+                <thead><tr><th>#</th><th>Zawodnik</th><th style="text-align:right">${key}</th></tr></thead>
+                <tbody>`;
+            sorted.forEach((p, i) => {
+                html += `<tr>
+                    <td class="pos">${i + 1}</td>
+                    <td class="name">${p.name}</td>
+                    <td class="num">${p.value}</td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            el.innerHTML = html;
+        }
+
+        async function loadTeam(playersUrl, summaryUrl, teamNum) {
+            try {
+                const [playersRes, summaryRes] = await Promise.all([
+                    fetch(playersUrl),
+                    fetch(summaryUrl)
+                ]);
+                if (!playersRes.ok || !summaryRes.ok) throw new Error('Błąd pobierania danych');
+
+                const playersText = await playersRes.text();
+                const summaryText = await summaryRes.text();
+
+                const players = parseCSV(playersText);
+                const summary = parseCSV(summaryText);
+
+                renderSummary(summary, 'summary-' + teamNum);
+                renderRanking(players, 'Gole', 'scorers-' + teamNum);
+                renderRanking(players, 'Asysty', 'assists-' + teamNum);
+            } catch (err) {
+                console.error(err);
+                document.getElementById('summary-' + teamNum).innerHTML =
+                    '<div class="error-msg">Nie udało się wczytać danych. Sprawdź publikację arkusza.</div>';
+                document.getElementById('scorers-' + teamNum).innerHTML = '';
+                document.getElementById('assists-' + teamNum).innerHTML = '';
+            }
+        }
+
+        // Załaduj obie drużyny
+        loadTeam(URLS.players1, URLS.summary1, 1);
+        loadTeam(URLS.players2, URLS.summary2, 2);
     </script>
 </body>
 </html>
