@@ -1346,3 +1346,204 @@ footer img[alt="Klub 1952"]:hover {
   }
 
 }
+
+
+/* ============================================================
+   CHOWANY NAGŁÓWEK + PŁYWAJĄCY HAMBURGER (header-scroll.js)
+   ============================================================ */
+
+header {
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), visibility 0s;
+  will-change: transform;
+}
+
+header.header-hidden {
+  transform: translateY(-105%);
+  visibility: hidden;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), visibility 0s linear 0.4s;
+}
+
+/* Okrągły przycisk-hamburger */
+.fm-btn {
+  position: fixed;
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 10000;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: var(--red);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.6), 0 0 16px var(--red-glow);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  -webkit-tap-highlight-color: transparent;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-28px) scale(0.5) rotate(-90deg);
+  transition: opacity 0.25s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+body.header-collapsed .fm-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.3s ease 0.12s,
+              transform 0.45s cubic-bezier(.34,1.56,.64,1) 0.12s,
+              visibility 0s;
+}
+
+.fm-btn svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  pointer-events: none;
+}
+
+.fm-btn line {
+  stroke: #ffffff;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.fm-btn[aria-expanded="true"] .l1 { transform: translateY(5px) rotate(45deg); }
+.fm-btn[aria-expanded="true"] .l2 { opacity: 0; transform: scaleX(0.2); }
+.fm-btn[aria-expanded="true"] .l3 { transform: translateY(-5px) rotate(-45deg); }
+
+/* Rozwijany panel menu */
+.fm-panel {
+  position: fixed;
+  top: calc(68px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 10000;
+  width: min(290px, calc(100vw - 28px));
+  max-height: calc(100vh - 90px);
+  max-height: calc(100dvh - 90px);
+  overflow-y: auto;
+  padding: 8px;
+  background: rgba(17,17,17,0.97);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--red);
+  border-radius: 14px;
+  box-shadow: 0 14px 44px rgba(0,0,0,0.75);
+  transform-origin: top right;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.92);
+  transition: opacity 0.2s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.fm-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.2s ease, transform 0.25s ease, visibility 0s;
+}
+
+.fm-title {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  padding: 8px 12px 10px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fm-panel a {
+  display: block;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: #ccc;
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
+}
+
+.fm-panel a:hover,
+.fm-panel a:focus-visible {
+  background: rgba(198,40,40,0.28);
+  color: var(--white);
+  outline: none;
+}
+
+.fm-panel a.is-current {
+  background: linear-gradient(90deg, var(--red-dark), var(--red));
+  color: var(--white);
+}
+
+.fm-panel a.fm-sub {
+  padding-left: 30px;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.fm-panel a.fm-sub::before {
+  content: '›';
+  margin-right: 8px;
+  color: var(--red);
+}
+
+.fm-panel a.fm-sub.is-current {
+  color: var(--white);
+}
+
+/* ── Telefon: stały przycisk-hamburger zamiast starego, rozwijanego menu ── */
+@media (max-width: 768px) {
+
+  .menu-container,
+  header nav {
+    display: none !important;
+  }
+
+  .fm-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  header .logo {
+    padding: 12px 74px 8px 16px;
+    gap: 10px;
+  }
+
+  header .logo img.herb:last-of-type {
+    display: none;
+  }
+
+  header .logo h1 {
+    font-size: 1.05rem;
+    line-height: 1.15;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header,
+  header.header-hidden,
+  .fm-btn,
+  body.header-collapsed .fm-btn,
+  .fm-panel,
+  .fm-panel.open {
+    transition-duration: 0.01s !important;
+    transition-delay: 0s !important;
+  }
+}
