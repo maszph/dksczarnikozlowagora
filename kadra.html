@@ -7,232 +7,1342 @@
     <title>Statystyki – DKS Czarni Kozłowa Góra</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header>
         <div class="logo">
             <img src="herb_dks.png" alt="Herb lewy" class="herb">
             <h1>DKS Czarni Kozłowa Góra</h1>
             <img src="herb_dks.png" alt="Herb prawy" class="herb">
         </div>
+
         <div class="menu-container">
             <button class="menu-toggle">☰</button>
         </div>
+
         <nav>
             <ul>
                 <li><a href="kadra.html">Statystyki</a></li>
                 <li><a href="tabela.html">Rozgrywki</a></li>
                 <li><a href="sponsorzy.html">Partnerzy</a></li>
-                <li><a href="index.html"><img src="herb_dks.png" alt="Herb klubu"></a></li>
+
+                <li>
+                    <a href="index.html">
+                        <img src="herb_dks.png" alt="Herb klubu">
+                    </a>
+                </li>
+
                 <li class="dropdown">
                     <a href="juniorzy.html">Juniorzy</a>
+
                     <ul class="dropdown-menu">
                         <li><a href="najblizsze_mecze.html">Terminarz i wyniki</a></li>
                         <li><a href="aktualnosci_juniorow.html">Aktualności</a></li>
                         <li><a href="tabele_juniorow.html">Tabele</a></li>
                     </ul>
                 </li>
+
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="klub1952.html">Klub 1952</a></li>
             </ul>
         </nav>
+
         <div class="current-page">Statystyki</div>
     </header>
 
+
     <main>
+
+        <!-- ========================= -->
+        <!-- PRZEŁĄCZNIK DRUŻYN -->
+        <!-- ========================= -->
+
         <div class="team-switcher">
-            <button class="active" data-team="1">1. Drużyna</button>
-            <button data-team="2">2. Drużyna</button>
+
+            <button class="active" data-team="1">
+                1. Drużyna
+            </button>
+
+            <button data-team="2">
+                2. Drużyna
+            </button>
+
+            <button data-team="all">
+                Łącznie
+            </button>
+
         </div>
 
-        <!-- ==================== 1. DRUŻYNA ==================== -->
+
+        <!-- ===================================================== -->
+        <!-- 1. DRUŻYNA -->
+        <!-- ===================================================== -->
+
         <div id="team1" class="team-panel active">
+
             <section class="section">
+
                 <h2>Podsumowanie – 1. Drużyna</h2>
+
                 <div class="stats-summary" id="summary-1">
-                    <div class="loading-msg">Ładowanie danych…</div>
+
+                    <div class="loading-msg">
+                        Ładowanie danych…
+                    </div>
+
                 </div>
+
             </section>
 
+
             <div class="rankings">
+
                 <div class="ranking-box">
+
                     <h3>⚽ Najlepsi strzelcy</h3>
-                    <div id="scorers-1"><div class="loading-msg">Ładowanie…</div></div>
+
+                    <div id="scorers-1">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
                 </div>
+
+
                 <div class="ranking-box">
+
                     <h3>🎯 Najlepsi asystenci</h3>
-                    <div id="assists-1"><div class="loading-msg">Ładowanie…</div></div>
+
+                    <div id="assists-1">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
 
-        <!-- ==================== 2. DRUŻYNA ==================== -->
+
+
+        <!-- ===================================================== -->
+        <!-- 2. DRUŻYNA -->
+        <!-- ===================================================== -->
+
         <div id="team2" class="team-panel">
+
             <section class="section">
+
                 <h2>Podsumowanie – 2. Drużyna</h2>
+
                 <div class="stats-summary" id="summary-2">
-                    <div class="loading-msg">Ładowanie danych…</div>
+
+                    <div class="loading-msg">
+                        Ładowanie danych…
+                    </div>
+
                 </div>
+
             </section>
 
+
             <div class="rankings">
+
                 <div class="ranking-box">
+
                     <h3>⚽ Najlepsi strzelcy</h3>
-                    <div id="scorers-2"><div class="loading-msg">Ładowanie…</div></div>
+
+                    <div id="scorers-2">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
                 </div>
+
+
                 <div class="ranking-box">
+
                     <h3>🎯 Najlepsi asystenci</h3>
-                    <div id="assists-2"><div class="loading-msg">Ładowanie…</div></div>
+
+                    <div id="assists-2">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
+
+
+        <!-- ===================================================== -->
+        <!-- ŁĄCZNIE – 1 + 2 DRUŻYNA -->
+        <!-- ===================================================== -->
+
+        <div id="teamAll" class="team-panel">
+
+            <section class="section">
+
+                <h2>Podsumowanie – 1. + 2. Drużyna</h2>
+
+                <div class="stats-summary" id="summary-all">
+
+                    <div class="loading-msg">
+                        Ładowanie danych…
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================== -->
+            <!-- RANKING WYSTĘPÓW -->
+            <!-- =============================== -->
+
+            <div class="ranking-full">
+
+                <div class="ranking-box">
+
+                    <h3>👕 Najwięcej występów</h3>
+
+                    <div id="appearances-all">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================== -->
+            <!-- GOLE + ASYSTY -->
+            <!-- =============================== -->
+
+            <div class="rankings">
+
+                <div class="ranking-box">
+
+                    <h3>⚽ Najlepsi strzelcy</h3>
+
+                    <div id="scorers-all">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ranking-box">
+
+                    <h3>🎯 Najlepsi asystenci</h3>
+
+                    <div id="assists-all">
+
+                        <div class="loading-msg">
+                            Ładowanie…
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </main>
 
+
+
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+
     <footer>
+
         <div class="container">
+
             <div>
-                <a href="klub1952.html" style="display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;">
-                    <img src="cooltext490384108176950.png" alt="Klub 1952">
+
+                <a href="klub1952.html"
+                   style="display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;">
+
+                    <img src="cooltext490384108176950.png"
+                         alt="Klub 1952">
+
                 </a>
+
             </div>
+
+
             <div>
+
                 <p>Kontakt</p>
-                <a href="mailto:dksczarnikozlowagora1952@gmail.com">dksczarnikozlowagora1952@gmail.com</a><br>
-                <a href="tel:+48509363567">+48 509 363 567</a>
+
+                <a href="mailto:dksczarnikozlowagora1952@gmail.com">
+                    dksczarnikozlowagora1952@gmail.com
+                </a>
+
+                <br>
+
+                <a href="tel:+48509363567">
+                    +48 509 363 567
+                </a>
+
             </div>
+
+
             <div>
+
                 <p>Social Media</p>
+
                 <div class="social-media">
-                    <a href="https://www.facebook.com/dksczarni" target="_blank"><img src="logo_fb.png" alt="Facebook">Facebook</a>
-                    <a href="https://www.instagram.com/dksczarnikozlowagora" target="_blank"><img src="logo_ig.png" alt="Instagram">Instagram</a>
-                    <a href="https://www.tiktok.com/@dksczarnikozlowagora" target="_blank"><img src="logo_tiktok.png" alt="TikTok">TikTok</a>
-                    <a href="https://www.youtube.com/@dksczarni" target="_blank"><img src="logo_yt.png" alt="YouTube">YouTube</a>
+
+                    <a href="https://www.facebook.com/dksczarni"
+                       target="_blank">
+
+                        <img src="logo_fb.png"
+                             alt="Facebook">
+
+                        Facebook
+
+                    </a>
+
+
+                    <a href="https://www.instagram.com/dksczarnikozlowagora"
+                       target="_blank">
+
+                        <img src="logo_ig.png"
+                             alt="Instagram">
+
+                        Instagram
+
+                    </a>
+
+
+                    <a href="https://www.tiktok.com/@dksczarnikozlowagora"
+                       target="_blank">
+
+                        <img src="logo_tiktok.png"
+                             alt="TikTok">
+
+                        TikTok
+
+                    </a>
+
+
+                    <a href="https://www.youtube.com/@dksczarni"
+                       target="_blank">
+
+                        <img src="logo_yt.png"
+                             alt="YouTube">
+
+                        YouTube
+
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
-    <script>
-        // Menu
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdown = document.querySelector(".dropdown > a");
-            if (dropdown) {
-                dropdown.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    let menu = this.nextElementSibling;
-                    menu.style.display = menu.style.display === "block" ? "none" : "block";
-                });
-            }
+
+
+<script>
+
+    /* ============================================================
+       MENU
+       ============================================================ */
+
+    document
+        .querySelector('.menu-toggle')
+        .addEventListener('click', function () {
+
+            document
+                .querySelector('nav ul')
+                .classList.toggle('active');
+
         });
 
-        // Team switcher
-        document.querySelectorAll('.team-switcher button').forEach(btn => {
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const dropdown = document.querySelector(".dropdown > a");
+
+        if (dropdown) {
+
+            dropdown.addEventListener("click", function (event) {
+
+                event.preventDefault();
+
+                let menu = this.nextElementSibling;
+
+                menu.style.display =
+                    menu.style.display === "block"
+                        ? "none"
+                        : "block";
+
+            });
+
+        }
+
+    });
+
+
+
+    /* ============================================================
+       TEAM SWITCHER
+       ============================================================ */
+
+    document
+        .querySelectorAll('.team-switcher button')
+        .forEach(btn => {
+
             btn.addEventListener('click', function () {
-                document.querySelectorAll('.team-switcher button').forEach(b => b.classList.remove('active'));
+
+                /*
+                 * Usuwamy aktywną klasę ze wszystkich przycisków
+                 */
+                document
+                    .querySelectorAll('.team-switcher button')
+                    .forEach(b => b.classList.remove('active'));
+
+
+                /*
+                 * Aktywujemy kliknięty przycisk
+                 */
                 this.classList.add('active');
-                document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
-                document.getElementById('team' + this.dataset.team).classList.add('active');
+
+
+                /*
+                 * Ukrywamy wszystkie panele
+                 */
+                document
+                    .querySelectorAll('.team-panel')
+                    .forEach(p => p.classList.remove('active'));
+
+
+                /*
+                 * Pokazujemy odpowiedni panel
+                 */
+                const team = this.dataset.team;
+
+                if (team === "all") {
+
+                    document
+                        .getElementById('teamAll')
+                        .classList.add('active');
+
+                } else {
+
+                    document
+                        .getElementById('team' + team)
+                        .classList.add('active');
+
+                }
+
             });
+
         });
 
-        // ===== GOOGLE SHEETS URLS =====
-        const URLS = {
-            players1: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=0&single=true&output=csv',
-            players2: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=789137830&single=true&output=csv',
-            summary1: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1641109961&single=true&output=csv',
-            summary2: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1892556878&single=true&output=csv'
-        };
 
-        // Prosty parser CSV
-        function parseCSV(text) {
-            const lines = text.trim().split(/\r?\n/);
-            if (lines.length < 2) return [];
-            const headers = lines[0].split(',').map(h => h.trim());
-            return lines.slice(1).map(line => {
-                const cols = line.split(',');
+
+    /* ============================================================
+       GOOGLE SHEETS URLS
+       ============================================================ */
+
+    const URLS = {
+
+        players1:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=0&single=true&output=csv',
+
+        players2:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=789137830&single=true&output=csv',
+
+        summary1:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1641109961&single=true&output=csv',
+
+        summary2:
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQAKpEjPyGHjfdZFPCBzJdC6CmghOuk7U1gPlbPC6vsXGOFqJ6Lu4wiWKcoguSJnVMJWM_BjP9utxbe/pub?gid=1892556878&single=true&output=csv'
+
+    };
+
+
+
+    /* ============================================================
+       CSV PARSER
+       ============================================================ */
+
+    function parseCSV(text) {
+
+        const lines =
+            text
+                .trim()
+                .split(/\r?\n/);
+
+
+        if (lines.length < 2) {
+            return [];
+        }
+
+
+        /*
+         * Parser obsługuje również pola ujęte w cudzysłowy.
+         */
+        function parseLine(line) {
+
+            const result = [];
+
+            let current = '';
+            let insideQuotes = false;
+
+
+            for (let i = 0; i < line.length; i++) {
+
+                const char = line[i];
+
+
+                if (char === '"') {
+
+                    if (
+                        insideQuotes &&
+                        line[i + 1] === '"'
+                    ) {
+
+                        current += '"';
+                        i++;
+
+                    } else {
+
+                        insideQuotes = !insideQuotes;
+
+                    }
+
+                }
+
+                else if (
+                    char === ',' &&
+                    !insideQuotes
+                ) {
+
+                    result.push(current.trim());
+                    current = '';
+
+                }
+
+                else {
+
+                    current += char;
+
+                }
+
+            }
+
+
+            result.push(current.trim());
+
+            return result;
+
+        }
+
+
+        const headers =
+            parseLine(lines[0])
+                .map(h => h.trim());
+
+
+        return lines
+            .slice(1)
+            .map(line => {
+
+                const cols = parseLine(line);
+
                 const obj = {};
+
+
                 headers.forEach((h, i) => {
-                    obj[h] = (cols[i] || '').trim();
+
+                    obj[h] =
+                        (cols[i] || '').trim();
+
                 });
+
+
                 return obj;
-            }).filter(row => row['Zawodnik'] || row['Mecze']);
+
+            })
+            .filter(row =>
+                row['Zawodnik'] ||
+                row['Mecze']
+            );
+
+    }
+
+
+
+    /* ============================================================
+       LICZBY
+       ============================================================ */
+
+    function number(value) {
+
+        if (
+            value === undefined ||
+            value === null ||
+            value === ''
+        ) {
+
+            return 0;
+
         }
 
-        function renderSummary(data, containerId) {
-            const el = document.getElementById(containerId);
-            if (!data || data.length === 0) {
-                el.innerHTML = '<div class="error-msg">Brak danych podsumowania</div>';
-                return;
-            }
-            const s = data[0];
-            el.innerHTML = `
-                <div class="stat-card"><div class="value">${s['Mecze'] || 0}</div><div class="label">Mecze</div></div>
-                <div class="stat-card highlight"><div class="value">${s['Zwycięstwa'] || 0}</div><div class="label">Zwycięstwa</div></div>
-                <div class="stat-card"><div class="value">${s['Remisy'] || 0}</div><div class="label">Remisy</div></div>
-                <div class="stat-card"><div class="value">${s['Porażki'] || 0}</div><div class="label">Porażki</div></div>
-                <div class="stat-card highlight"><div class="value">${s['Bramki strzelone'] || 0}</div><div class="label">Bramki strzelone</div></div>
-                <div class="stat-card"><div class="value">${s['Bramki stracone'] || 0}</div><div class="label">Bramki stracone</div></div>
+
+        return parseInt(
+            String(value).replace(',', '.'),
+            10
+        ) || 0;
+
+    }
+
+
+
+    /* ============================================================
+       PODSUMOWANIE DRUŻYNY
+       ============================================================ */
+
+    function renderSummary(data, containerId) {
+
+        const el =
+            document.getElementById(containerId);
+
+
+        if (
+            !data ||
+            data.length === 0
+        ) {
+
+            el.innerHTML =
+                '<div class="error-msg">' +
+                'Brak danych podsumowania' +
+                '</div>';
+
+            return;
+
+        }
+
+
+        const s = data[0];
+
+
+        el.innerHTML = `
+
+            <div class="stat-card">
+                <div class="value">
+                    ${number(s['Mecze'])}
+                </div>
+
+                <div class="label">
+                    Mecze
+                </div>
+            </div>
+
+
+            <div class="stat-card highlight">
+                <div class="value">
+                    ${number(s['Zwycięstwa'])}
+                </div>
+
+                <div class="label">
+                    Zwycięstwa
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="value">
+                    ${number(s['Remisy'])}
+                </div>
+
+                <div class="label">
+                    Remisy
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="value">
+                    ${number(s['Porażki'])}
+                </div>
+
+                <div class="label">
+                    Porażki
+                </div>
+            </div>
+
+
+            <div class="stat-card highlight">
+                <div class="value">
+                    ${number(s['Bramki strzelone'])}
+                </div>
+
+                <div class="label">
+                    Bramki strzelone
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="value">
+                    ${number(s['Bramki stracone'])}
+                </div>
+
+                <div class="label">
+                    Bramki stracone
+                </div>
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* ============================================================
+       RANKINGI – POJEDYNCZA DRUŻYNA
+       ============================================================ */
+
+    function renderRanking(
+        players,
+        key,
+        containerId,
+        limit = 10
+    ) {
+
+        const el =
+            document.getElementById(containerId);
+
+
+        const sorted = players
+
+            .map(p => ({
+
+                name:
+                    p['Zawodnik'],
+
+                value:
+                    number(p[key]),
+
+                matches:
+                    number(p['Mecze'])
+
+            }))
+
+            .filter(p => p.value > 0)
+
+            .sort((a, b) =>
+                b.value - a.value ||
+                b.matches - a.matches ||
+                a.name.localeCompare(
+                    b.name,
+                    'pl'
+                )
+            )
+
+            .slice(0, limit);
+
+
+        if (sorted.length === 0) {
+
+            el.innerHTML =
+                '<p style="color:#888;padding:12px 0;">' +
+                'Brak danych (wszyscy mają 0)' +
+                '</p>';
+
+            return;
+
+        }
+
+
+        let html = `
+
+            <table class="ranking-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>Zawodnik</th>
+
+                        <th style="text-align:right">
+                            ${key}
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+        `;
+
+
+        sorted.forEach((p, i) => {
+
+            html += `
+
+                <tr>
+
+                    <td class="pos">
+                        ${i + 1}
+                    </td>
+
+                    <td class="name">
+                        ${p.name}
+                    </td>
+
+                    <td class="num">
+                        ${p.value}
+                    </td>
+
+                </tr>
+
             `;
-        }
 
-        function renderRanking(players, key, containerId, limit = 10) {
-            const el = document.getElementById(containerId);
-            const sorted = players
-                .map(p => ({ name: p['Zawodnik'], value: parseInt(p[key]) || 0, matches: parseInt(p['Mecze']) || 0 }))
-                .filter(p => p.value > 0)
-                .sort((a, b) => b.value - a.value || b.matches - a.matches)
-                .slice(0, limit);
+        });
 
-            if (sorted.length === 0) {
-                el.innerHTML = '<p style="color:#888;padding:12px 0;">Brak danych (wszyscy mają 0)</p>';
-                return;
-            }
 
-            let html = `<table class="ranking-table">
-                <thead><tr><th>#</th><th>Zawodnik</th><th style="text-align:right">${key}</th></tr></thead>
-                <tbody>`;
-            sorted.forEach((p, i) => {
-                html += `<tr>
-                    <td class="pos">${i + 1}</td>
-                    <td class="name">${p.name}</td>
-                    <td class="num">${p.value}</td>
-                </tr>`;
+        html += `
+
+                </tbody>
+
+            </table>
+
+        `;
+
+
+        el.innerHTML = html;
+
+    }
+
+
+
+    /* ============================================================
+       ŁĄCZENIE 1. + 2. DRUŻYNY
+       ============================================================ */
+
+    function combinePlayers(
+        players1,
+        players2
+    ) {
+
+        /*
+         * Map pozwala połączyć zawodnika
+         * występującego w obu drużynach.
+         */
+        const combined = new Map();
+
+
+        function addPlayers(players) {
+
+            players.forEach(player => {
+
+                const rawName =
+                    (player['Zawodnik'] || '').trim();
+
+
+                if (!rawName) {
+                    return;
+                }
+
+
+                /*
+                 * Klucz jest normalizowany,
+                 * dzięki czemu przypadkowe różnice
+                 * wielkości liter nie utworzą dwóch osób.
+                 */
+                const key =
+                    rawName
+                        .toLocaleLowerCase('pl-PL')
+                        .replace(/\s+/g, ' ')
+                        .trim();
+
+
+                if (!combined.has(key)) {
+
+                    combined.set(key, {
+
+                        Zawodnik: rawName,
+
+                        Mecze: 0,
+
+                        Gole: 0,
+
+                        Asysty: 0
+
+                    });
+
+                }
+
+
+                const existing =
+                    combined.get(key);
+
+
+                existing.Mecze +=
+                    number(player['Mecze']);
+
+
+                existing.Gole +=
+                    number(player['Gole']);
+
+
+                existing.Asysty +=
+                    number(player['Asysty']);
+
             });
-            html += '</tbody></table>';
-            el.innerHTML = html;
+
         }
 
-        async function loadTeam(playersUrl, summaryUrl, teamNum) {
-            try {
-                const [playersRes, summaryRes] = await Promise.all([
-                    fetch(playersUrl),
-                    fetch(summaryUrl)
-                ]);
-                if (!playersRes.ok || !summaryRes.ok) throw new Error('Błąd pobierania danych');
 
-                const playersText = await playersRes.text();
-                const summaryText = await summaryRes.text();
+        addPlayers(players1);
+        addPlayers(players2);
 
-                const players = parseCSV(playersText);
-                const summary = parseCSV(summaryText);
 
-                renderSummary(summary, 'summary-' + teamNum);
-                renderRanking(players, 'Gole', 'scorers-' + teamNum);
-                renderRanking(players, 'Asysty', 'assists-' + teamNum);
-            } catch (err) {
-                console.error(err);
-                document.getElementById('summary-' + teamNum).innerHTML =
-                    '<div class="error-msg">Nie udało się wczytać danych. Sprawdź publikację arkusza.</div>';
-                document.getElementById('scorers-' + teamNum).innerHTML = '';
-                document.getElementById('assists-' + teamNum).innerHTML = '';
+        return Array.from(
+            combined.values()
+        );
+
+    }
+
+
+
+    /* ============================================================
+       PODSUMOWANIE ŁĄCZNE
+       ============================================================ */
+
+    function renderCombinedSummary(
+        players,
+        containerId
+    ) {
+
+        const el =
+            document.getElementById(containerId);
+
+
+        let matches = 0;
+        let goals = 0;
+        let assists = 0;
+
+
+        players.forEach(player => {
+
+            matches += number(player.Mecze);
+
+            goals += number(player.Gole);
+
+            assists += number(player.Asysty);
+
+        });
+
+
+        el.innerHTML = `
+
+            <div class="stat-card highlight">
+                <div class="value">
+                    ${matches}
+                </div>
+
+                <div class="label">
+                    Występy
+                </div>
+            </div>
+
+
+            <div class="stat-card highlight">
+                <div class="value">
+                    ${goals}
+                </div>
+
+                <div class="label">
+                    Gole
+                </div>
+            </div>
+
+
+            <div class="stat-card highlight">
+                <div class="value">
+                    ${assists}
+                </div>
+
+                <div class="label">
+                    Asysty
+                </div>
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* ============================================================
+       RANKING ŁĄCZNY
+       ============================================================ */
+
+    function renderCombinedRanking(
+        players,
+        key,
+        containerId,
+        limit = 10
+    ) {
+
+        const el =
+            document.getElementById(containerId);
+
+
+        const sorted = players
+
+            .map(player => ({
+
+                name:
+                    player.Zawodnik,
+
+                value:
+                    number(player[key]),
+
+                matches:
+                    number(player.Mecze)
+
+            }))
+
+            .filter(player =>
+                player.value > 0
+            )
+
+            .sort((a, b) =>
+
+                b.value - a.value ||
+
+                b.matches - a.matches ||
+
+                a.name.localeCompare(
+                    b.name,
+                    'pl'
+                )
+
+            )
+
+            .slice(0, limit);
+
+
+        if (sorted.length === 0) {
+
+            el.innerHTML =
+                '<p style="color:#888;padding:12px 0;">' +
+                'Brak danych' +
+                '</p>';
+
+            return;
+
+        }
+
+
+        let html = `
+
+            <table class="ranking-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>Zawodnik</th>
+
+                        <th style="text-align:right">
+                            ${key}
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+        `;
+
+
+        sorted.forEach((player, index) => {
+
+            html += `
+
+                <tr>
+
+                    <td class="pos">
+                        ${index + 1}
+                    </td>
+
+                    <td class="name">
+                        ${player.name}
+                    </td>
+
+                    <td class="num">
+                        ${player.value}
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+
+        html += `
+
+                </tbody>
+
+            </table>
+
+        `;
+
+
+        el.innerHTML = html;
+
+    }
+
+
+
+    /* ============================================================
+       ŁADOWANIE DANYCH
+       ============================================================ */
+
+    async function loadTeam(
+        playersUrl,
+        summaryUrl,
+        teamNum
+    ) {
+
+        try {
+
+            const [
+                playersRes,
+                summaryRes
+            ] = await Promise.all([
+
+                fetch(playersUrl),
+
+                fetch(summaryUrl)
+
+            ]);
+
+
+            if (
+                !playersRes.ok ||
+                !summaryRes.ok
+            ) {
+
+                throw new Error(
+                    'Błąd pobierania danych'
+                );
+
             }
+
+
+            const playersText =
+                await playersRes.text();
+
+
+            const summaryText =
+                await summaryRes.text();
+
+
+            const players =
+                parseCSV(playersText);
+
+
+            const summary =
+                parseCSV(summaryText);
+
+
+            renderSummary(
+                summary,
+                'summary-' + teamNum
+            );
+
+
+            renderRanking(
+                players,
+                'Gole',
+                'scorers-' + teamNum
+            );
+
+
+            renderRanking(
+                players,
+                'Asysty',
+                'assists-' + teamNum
+            );
+
+
+            /*
+             * Zwracamy zawodników,
+             * żeby później wykorzystać ich
+             * w zakładce ŁĄCZNIE.
+             */
+            return players;
+
         }
 
-        // Załaduj obie drużyny
-        loadTeam(URLS.players1, URLS.summary1, 1);
-        loadTeam(URLS.players2, URLS.summary2, 2);
-    </script>
+        catch (err) {
+
+            console.error(err);
+
+
+            document.getElementById(
+                'summary-' + teamNum
+            ).innerHTML =
+
+                '<div class="error-msg">' +
+                'Nie udało się wczytać danych. ' +
+                'Sprawdź publikację arkusza.' +
+                '</div>';
+
+
+            document.getElementById(
+                'scorers-' + teamNum
+            ).innerHTML = '';
+
+
+            document.getElementById(
+                'assists-' + teamNum
+            ).innerHTML = '';
+
+
+            return [];
+
+        }
+
+    }
+
+
+
+    /* ============================================================
+       START
+       ============================================================ */
+
+    async function initStatistics() {
+
+        /*
+         * Pobieramy oba zespoły równocześnie.
+         */
+        const [
+            players1,
+            players2
+        ] = await Promise.all([
+
+            loadTeam(
+                URLS.players1,
+                URLS.summary1,
+                1
+            ),
+
+            loadTeam(
+                URLS.players2,
+                URLS.summary2,
+                2
+            )
+
+        ]);
+
+
+        /*
+         * Łączymy zawodników obu drużyn.
+         */
+        const combined =
+            combinePlayers(
+                players1,
+                players2
+            );
+
+
+        /*
+         * Renderujemy podsumowanie.
+         */
+        renderCombinedSummary(
+            combined,
+            'summary-all'
+        );
+
+
+        /*
+         * TOP 10 występów.
+         */
+        renderCombinedRanking(
+            combined
+                .sort((a, b) =>
+                    b.Mecze - a.Mecze ||
+                    b.Gole - a.Gole ||
+                    b.Asysty - a.Asysty
+                ),
+            'Mecze',
+            'appearances-all'
+        );
+
+
+        /*
+         * TOP 10 strzelców.
+         */
+        renderCombinedRanking(
+            combined,
+            'Gole',
+            'scorers-all'
+        );
+
+
+        /*
+         * TOP 10 asystentów.
+         */
+        renderCombinedRanking(
+            combined,
+            'Asysty',
+            'assists-all'
+        );
+
+    }
+
+
+    initStatistics();
+
+</script>
+
 </body>
 </html>

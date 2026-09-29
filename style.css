@@ -4,7 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --red:       #c62828;
@@ -23,7 +27,9 @@
   --transition: 0.25s cubic-bezier(.4,0,.2,1);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
@@ -34,11 +40,22 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 3px;
+}
+
 
 /* ── Header ── */
+
 header {
   background: var(--dark);
   border-bottom: 1px solid var(--border);
@@ -48,7 +65,9 @@ header {
   z-index: 9999;
 }
 
+
 /* Logo */
+
 header .logo {
   display: flex;
   align-items: center;
@@ -62,6 +81,7 @@ header .logo img.herb {
   filter: drop-shadow(0 0 8px var(--red-glow));
   transition: filter var(--transition);
 }
+
 header .logo img.herb:hover {
   filter: drop-shadow(0 0 16px rgba(198,40,40,0.75));
 }
@@ -76,7 +96,9 @@ header .logo h1 {
   text-shadow: 0 2px 14px var(--red-glow);
 }
 
+
 /* ── Nav ── */
+
 nav {
   background: rgba(0,0,0,0.65);
   backdrop-filter: blur(12px);
@@ -109,6 +131,7 @@ nav ul li a {
   display: block;
   transition: color var(--transition), background var(--transition);
 }
+
 nav ul li a:hover {
   color: var(--white);
   background: rgba(198,40,40,0.28);
@@ -121,10 +144,17 @@ nav ul li img {
   filter: drop-shadow(0 0 6px var(--red-glow));
   transition: transform var(--transition);
 }
-nav ul li img:hover { transform: scale(1.12); }
+
+nav ul li img:hover {
+  transform: scale(1.12);
+}
+
 
 /* ── Dropdown ── */
-.dropdown { position: relative; }
+
+.dropdown {
+  position: relative;
+}
 
 .dropdown-menu {
   display: none;
@@ -140,7 +170,10 @@ nav ul li img:hover { transform: scale(1.12); }
   box-shadow: 0 10px 36px rgba(0,0,0,0.7);
   z-index: 99999;
 }
-.dropdown:hover .dropdown-menu { display: block; }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 
 .dropdown-menu li a {
   padding: 10px 18px;
@@ -150,12 +183,15 @@ nav ul li img:hover { transform: scale(1.12); }
   display: block;
   transition: background var(--transition), color var(--transition);
 }
+
 .dropdown-menu li a:hover {
   background: rgba(198,40,40,0.2);
   color: var(--white);
 }
 
+
 /* ── Current Page Badge ── */
+
 .current-page {
   position: relative;
   z-index: 1;
@@ -172,7 +208,9 @@ nav ul li img:hover { transform: scale(1.12); }
   margin: 10px auto;
 }
 
+
 /* ── Hero Image ── */
+
 .hero-image {
   width: 100%;
   height: 320px;
@@ -181,6 +219,7 @@ nav ul li img:hover { transform: scale(1.12); }
   background-position: center;
   position: relative;
 }
+
 .hero-image::after {
   content: '';
   position: absolute;
@@ -188,7 +227,9 @@ nav ul li img:hover { transform: scale(1.12); }
   background: linear-gradient(to bottom, transparent 40%, var(--black) 100%);
 }
 
+
 /* ── Main ── */
+
 main {
   margin: 32px auto;
   max-width: 1100px;
@@ -207,11 +248,24 @@ main h2 {
   padding-bottom: 10px;
   border-bottom: 2px solid var(--red);
 }
-main p, main li { color: #ccc; }
-main ul { padding-left: 1.4rem; margin-bottom: 1rem; }
-main ul li { margin-bottom: 6px; }
+
+main p,
+main li {
+  color: #ccc;
+}
+
+main ul {
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+main ul li {
+  margin-bottom: 6px;
+}
+
 
 /* ── News ── */
+
 .news-item {
   background: var(--card);
   border: 1px solid var(--border);
@@ -221,10 +275,12 @@ main ul li { margin-bottom: 6px; }
   margin-bottom: 28px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
+
 .news-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 36px rgba(198,40,40,0.14);
 }
+
 .news-item h2 {
   font-family: var(--font-head);
   font-size: 1.55rem;
@@ -234,6 +290,7 @@ main ul li { margin-bottom: 6px; }
   padding: 0;
   margin-bottom: 14px;
 }
+
 .news-date {
   font-family: var(--font-head);
   font-size: 0.88rem;
@@ -247,11 +304,26 @@ main ul li { margin-bottom: 6px; }
   border-radius: 4px;
   margin-bottom: 16px;
 }
-.news-item p { color: #bbb; margin-bottom: 10px; }
-.news-item b { color: var(--white); }
-.news-item img { width: 100%; border-radius: 8px; margin-top: 16px; display: block; }
+
+.news-item p {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.news-item b {
+  color: var(--white);
+}
+
+.news-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 16px;
+  display: block;
+}
+
 
 /* ── Buttons ── */
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -259,6 +331,7 @@ main ul li { margin-bottom: 6px; }
   gap: 14px;
   padding: 24px 0;
 }
+
 .button-container a {
   display: inline-flex;
   align-items: center;
@@ -277,6 +350,7 @@ main ul li { margin-bottom: 6px; }
   border: 2px solid transparent;
   transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
 }
+
 .button-container a:hover {
   background: transparent;
   border-color: var(--red);
@@ -284,8 +358,13 @@ main ul li { margin-bottom: 6px; }
   transform: translateY(-2px);
 }
 
+
 /* ── Gallery ── */
-.gallery-section { padding: 10px 0; }
+
+.gallery-section {
+  padding: 10px 0;
+}
+
 .gallery-section h1 {
   font-family: var(--font-head);
   font-size: 2rem;
@@ -296,7 +375,9 @@ main ul li { margin-bottom: 6px; }
   color: var(--white);
 }
 
+
 /* ── Content / Section layout ── */
+
 .content {
   display: flex;
   justify-content: space-between;
@@ -304,7 +385,11 @@ main ul li { margin-bottom: 6px; }
   max-width: 1100px;
   margin: 0 auto;
 }
-.section { margin-top: 2rem; }
+
+.section {
+  margin-top: 2rem;
+}
+
 .section h2 {
   font-family: var(--font-head);
   font-size: 1.7rem;
@@ -316,8 +401,14 @@ main ul li { margin-bottom: 6px; }
   margin-bottom: 20px;
 }
 
+
 /* ── Match Schedule ── */
-.match-schedule { display: flex; flex-direction: column; gap: 10px; }
+
+.match-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 .match {
   display: flex;
@@ -331,7 +422,12 @@ main ul li { margin-bottom: 6px; }
   gap: 16px;
   transition: background var(--transition), transform var(--transition);
 }
-.match:hover { background: #252525; transform: translateX(4px); }
+
+.match:hover {
+  background: #252525;
+  transform: translateX(4px);
+}
+
 .match .team {
   font-family: var(--font-head);
   font-weight: 600;
@@ -340,9 +436,14 @@ main ul li { margin-bottom: 6px; }
   color: var(--white);
   text-transform: uppercase;
 }
-.match .date { font-size: 0.88rem; color: var(--red); white-space: nowrap; font-weight: 500; }
 
-/* Wynik – duży i widoczny */
+.match .date {
+  font-size: 0.88rem;
+  color: var(--red);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
 .match .score {
   font-family: var(--font-head);
   font-size: 1.35rem;
@@ -351,12 +452,15 @@ main ul li { margin-bottom: 6px; }
   letter-spacing: 0.04em;
   margin-left: 8px;
 }
+
 .match .score.pending {
   color: var(--muted);
   font-size: 1.15rem;
 }
 
+
 /* ── League Table ── */
+
 .table-container {
   width: 100%;
   overflow-x: auto;
@@ -364,13 +468,15 @@ main ul li { margin-bottom: 6px; }
   border-radius: var(--radius);
   border: 1px solid var(--border);
 }
+
 .league-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.93rem;
   min-width: 520px;
-  font-weight: 600; /* cały tekst pogrubiony */
+  font-weight: 600;
 }
+
 .league-table thead tr {
   background: linear-gradient(90deg, var(--red-dark), var(--red));
   color: #fff;
@@ -379,24 +485,50 @@ main ul li { margin-bottom: 6px; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.league-table th, .league-table td {
+
+.league-table th,
+.league-table td {
   padding: 11px 13px;
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid var(--border);
 }
-.league-table td:nth-child(3) { text-align: left; font-weight: 700; color: var(--white); }
-.league-table tbody tr { background: var(--card); transition: background var(--transition); }
-.league-table tbody tr:nth-of-type(even) { background: #1a1a1a; }
-.league-table tbody tr:hover { background: rgba(198,40,40,0.12); }
-.league-table img { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; }
+
+.league-table td:nth-child(3) {
+  text-align: left;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.league-table tbody tr {
+  background: var(--card);
+  transition: background var(--transition);
+}
+
+.league-table tbody tr:nth-of-type(even) {
+  background: #1a1a1a;
+}
+
+.league-table tbody tr:hover {
+  background: rgba(198,40,40,0.12);
+}
+
+.league-table img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
 
 /* ── Kadra ── */
+
 .kadra {
   margin: 10px auto;
   max-width: 1100px;
   width: 100%;
 }
+
 .kadra h2 {
   font-family: var(--font-head);
   font-size: 1.5rem;
@@ -408,6 +540,7 @@ main ul li { margin-bottom: 6px; }
   padding-bottom: 8px;
   margin: 36px 0 20px;
 }
+
 .players {
   display: flex;
   flex-wrap: wrap;
@@ -469,10 +602,25 @@ main ul li { margin-bottom: 6px; }
   color: var(--muted);
 }
 
+
 /* ── Sponsors ── */
-.partners-sponsors { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-top: 20px; }
-.partners, .sponsors { flex: 1; max-width: 48%; }
-.partners h3, .sponsors h3 {
+
+.partners-sponsors {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.partners,
+.sponsors {
+  flex: 1;
+  max-width: 48%;
+}
+
+.partners h3,
+.sponsors h3 {
   font-family: var(--font-head);
   font-size: 1.35rem;
   font-weight: 700;
@@ -484,6 +632,7 @@ main ul li { margin-bottom: 6px; }
   margin-bottom: 24px;
   text-align: center;
 }
+
 .sponsor {
   margin-bottom: 22px;
   text-align: center;
@@ -493,7 +642,12 @@ main ul li { margin-bottom: 6px; }
   border-radius: var(--radius);
   transition: border-color var(--transition), transform var(--transition);
 }
-.sponsor:hover { border-color: var(--red); transform: translateY(-3px); }
+
+.sponsor:hover {
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+
 .sponsor img.sponsor-logo {
   max-width: 170px;
   height: auto;
@@ -502,13 +656,37 @@ main ul li { margin-bottom: 6px; }
   filter: grayscale(30%);
   transition: filter var(--transition);
 }
-.sponsor:hover img.sponsor-logo { filter: grayscale(0); }
-.sponsor p { color: #999; font-size: 0.88rem; }
-.sponsor p a { color: #999; text-decoration: none; transition: color var(--transition); }
-.sponsor p a:hover { color: var(--red); }
+
+.sponsor:hover img.sponsor-logo {
+  filter: grayscale(0);
+}
+
+.sponsor p {
+  color: #999;
+  font-size: 0.88rem;
+}
+
+.sponsor p a {
+  color: #999;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.sponsor p a:hover {
+  color: var(--red);
+}
+
 
 /* ── Social Media ── */
-.social-media { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
 .social-media a {
   text-decoration: none;
   color: var(--white);
@@ -523,14 +701,21 @@ main ul li { margin-bottom: 6px; }
   font-weight: 500;
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
 }
+
 .social-media a:hover {
   background: rgba(198,40,40,0.2);
   border-color: var(--red);
   transform: translateY(-2px);
 }
-.social-media img { width: 22px; height: 22px; }
+
+.social-media img {
+  width: 22px;
+  height: 22px;
+}
+
 
 /* ── Footer ── */
+
 footer {
   background: #111;
   border-top: 2px solid var(--red);
@@ -538,6 +723,7 @@ footer {
   padding: 36px 0 24px;
   margin-top: 48px;
 }
+
 footer .container {
   display: flex;
   flex-wrap: wrap;
@@ -549,27 +735,80 @@ footer .container {
   padding: 0 24px;
   text-align: center;
 }
-footer p { color: var(--muted); font-size: 0.9rem; margin-bottom: 6px; }
-footer a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color var(--transition); }
-footer a:hover { color: var(--red); }
-footer img[alt="Klub 1952"] { width: 130px; opacity: 0.85; transition: opacity var(--transition); }
-footer img[alt="Klub 1952"]:hover { opacity: 1; }
+
+footer p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--red);
+}
+
+footer img[alt="Klub 1952"] {
+  width: 130px;
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+
+footer img[alt="Klub 1952"]:hover {
+  opacity: 1;
+}
+
 
 /* ── Klub 1952 ── */
+
 .klub1952 {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 40px 32px;
 }
-.klub1952 h2 { font-family: var(--font-head); font-size: 1.8rem; color: var(--white); border: none; }
-.klub1952 ul { list-style: none; padding: 0; margin-bottom: 24px; }
-.klub1952 ul li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: #ddd; }
-.klub1952 .opis p { margin-bottom: 12px; color: #bbb; }
-.klub1952 .opis a { color: var(--red); }
-.klub1952 .opis strong { color: var(--white); }
+
+.klub1952 h2 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  color: var(--white);
+  border: none;
+}
+
+.klub1952 ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.klub1952 ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+.klub1952 .opis p {
+  margin-bottom: 12px;
+  color: #bbb;
+}
+
+.klub1952 .opis a {
+  color: var(--red);
+}
+
+.klub1952 .opis strong {
+  color: var(--white);
+}
+
 
 /* ── Results ── */
+
 #wyniki p {
   background: var(--card);
   border: 1px solid var(--border);
@@ -579,10 +818,21 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   margin-bottom: 10px;
   color: #ccc;
 }
-#wyniki p strong { color: var(--white); font-family: var(--font-head); font-size: 1.05rem; }
-#wyniki p small { color: var(--muted); font-size: 0.85rem; }
+
+#wyniki p strong {
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+}
+
+#wyniki p small {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 
 /* ── Mobile menu ── */
+
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -594,7 +844,11 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   border-radius: 8px;
   transition: border-color var(--transition), background var(--transition);
 }
-.menu-toggle:hover { border-color: var(--red); background: rgba(198,40,40,0.15); }
+
+.menu-toggle:hover {
+  border-color: var(--red);
+  background: rgba(198,40,40,0.15);
+}
 
 .menu-container {
   display: none;
@@ -603,7 +857,9 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   background: rgba(0,0,0,0.5);
 }
 
+
 /* ── Team Switcher / Tabs ── */
+
 .team-switcher {
   display: flex;
   justify-content: center;
@@ -611,6 +867,7 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   margin-bottom: 28px;
   flex-wrap: wrap;
 }
+
 .team-switcher button {
   font-family: var(--font-head);
   font-size: 1.05rem;
@@ -625,73 +882,41 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   cursor: pointer;
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
+
 .team-switcher button:hover {
   transform: translateY(-2px);
 }
+
 .team-switcher button.active {
   background: var(--red);
   color: var(--white);
 }
+
 .team-panel {
   display: none;
 }
+
 .team-panel.active {
   display: block;
 }
+
 .highlight-row {
   background: rgba(198,40,40,0.18) !important;
   font-weight: 700;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .content { flex-direction: column; }
-  .partners-sponsors { flex-direction: column; }
-  .partners, .sponsors { max-width: 100%; }
-}
 
-@media (max-width: 768px) {
-  .menu-container { display: flex; }
-  .menu-toggle { display: block; }
+/* ============================================================
+   STATYSTYKI
+   ============================================================ */
 
-  nav { border-top: none; }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding: 8px 0;
-    background: #111;
-    border-top: 1px solid var(--border);
-  }
-  nav ul.active { display: flex; }
-  nav ul li { width: 100%; }
-  nav ul li a { text-align: center; border-radius: 0; padding: 12px 20px; width: 100%; }
-
-  .hero-image { height: 180px; }
-  .player-card {
-  flex: 0 0 210px;
-  max-width: 210px;
-}
-  .button-container { flex-direction: column; align-items: center; }
-  .button-container a { width: 80%; max-width: 280px; }
-  .match { flex-direction: column; align-items: flex-start; gap: 6px; }
-  main { width: 94%; }
-}
-
-@media (max-width: 480px) {
-  header .logo h1 { font-size: 1.1rem; }
-  header .logo img.herb { width: 38px; }
-  .player-card { flex: 1 1 100%; }
-  .news-item { padding: 16px; }
-}
-
-/* ── Statystyki ── */
 .stats-summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 14px;
   margin-bottom: 32px;
 }
+
 .stat-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -700,10 +925,12 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   text-align: center;
   transition: border-color var(--transition), transform var(--transition);
 }
+
 .stat-card:hover {
   border-color: var(--red);
   transform: translateY(-3px);
 }
+
 .stat-card .value {
   font-family: var(--font-head);
   font-size: 2rem;
@@ -711,6 +938,7 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   color: var(--white);
   line-height: 1.1;
 }
+
 .stat-card .label {
   font-family: var(--font-head);
   font-size: 0.8rem;
@@ -720,7 +948,13 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   color: var(--muted);
   margin-top: 6px;
 }
-.stat-card.highlight .value { color: var(--red); }
+
+.stat-card.highlight .value {
+  color: var(--red);
+}
+
+
+/* ── Rankingi ── */
 
 .rankings {
   display: grid;
@@ -728,9 +962,26 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   gap: 28px;
   margin-top: 12px;
 }
-@media (max-width: 700px) {
-  .rankings { grid-template-columns: 1fr; }
+
+
+/*
+ * Nowy kontener dla rankingu występów.
+ * Dzięki temu TOP 10 występów jest na całą szerokość.
+ */
+
+.ranking-full {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 28px;
 }
+
+
+/* ── Ranking Box ── */
+
+.ranking-box {
+  min-width: 0;
+}
+
 .ranking-box h3 {
   font-family: var(--font-head);
   font-size: 1.25rem;
@@ -742,12 +993,17 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
+
+
+/* ── Ranking Table ── */
+
 .ranking-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
   font-weight: 600;
 }
+
 .ranking-table th {
   font-family: var(--font-head);
   font-size: 0.8rem;
@@ -758,19 +1014,29 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
+
 .ranking-table td {
   padding: 10px;
   border-bottom: 1px solid var(--border);
   color: #ccc;
 }
-.ranking-table tr:hover td { background: rgba(198,40,40,0.1); }
+
+.ranking-table tr:hover td {
+  background: rgba(198,40,40,0.1);
+}
+
 .ranking-table .pos {
   font-family: var(--font-head);
   font-weight: 900;
   color: var(--red);
   width: 36px;
 }
-.ranking-table .name { color: var(--white); font-weight: 700; }
+
+.ranking-table .name {
+  color: var(--white);
+  font-weight: 700;
+}
+
 .ranking-table .num {
   font-family: var(--font-head);
   font-size: 1.15rem;
@@ -778,10 +1044,153 @@ footer img[alt="Klub 1952"]:hover { opacity: 1; }
   color: var(--white);
   text-align: right;
 }
-.loading-msg, .error-msg {
+
+
+/* ── Loading / Error ── */
+
+.loading-msg,
+.error-msg {
   text-align: center;
   padding: 40px 20px;
   color: var(--muted);
   font-size: 1.1rem;
 }
-.error-msg { color: #e57373; }
+
+.error-msg {
+  color: #e57373;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .content {
+    flex-direction: column;
+  }
+
+  .partners-sponsors {
+    flex-direction: column;
+  }
+
+  .partners,
+  .sponsors {
+    max-width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .menu-container {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    border-top: none;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 0;
+    background: #111;
+    border-top: 1px solid var(--border);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    text-align: center;
+    border-radius: 0;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .hero-image {
+    height: 180px;
+  }
+
+  .player-card {
+    flex: 0 0 210px;
+    max-width: 210px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container a {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .match {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  main {
+    width: 94%;
+  }
+
+  /*
+   * Na telefonie wszystkie rankingi są jeden pod drugim.
+   */
+
+  .rankings {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  header .logo h1 {
+    font-size: 1.1rem;
+  }
+
+  header .logo img.herb {
+    width: 38px;
+  }
+
+  .player-card {
+    flex: 1 1 100%;
+  }
+
+  .news-item {
+    padding: 16px;
+  }
+
+  /*
+   * Mniejsze przyciski zakładek na bardzo małych ekranach.
+   */
+
+  .team-switcher {
+    gap: 8px;
+  }
+
+  .team-switcher button {
+    flex: 1 1 100%;
+    padding: 11px 15px;
+    font-size: 0.95rem;
+  }
+
+}
