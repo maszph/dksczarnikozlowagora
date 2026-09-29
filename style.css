@@ -805,7 +805,159 @@ footer img[alt="Klub 1952"]:hover {
 .klub1952 .opis strong {
   color: var(--white);
 }
+/* ── Klub 1952 – Supporters ── */
 
+.klub1952 {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.klub1952-logo {
+  width: 280px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.supporters-box {
+  background: #181818;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  margin-bottom: 36px;
+}
+
+.supporters-box h2 {
+  font-family: var(--font-head);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--white);
+  border: none;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.supporters-count {
+  font-size: 1.15rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.supporters-count strong {
+  color: var(--red);
+  font-size: 1.4rem;
+  font-family: var(--font-head);
+}
+
+.supporters-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-head);
+}
+
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.supporter-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 12px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--white);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.supporter-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.supporters-anonymous {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.supporters-update {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+.supporters-update a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.supporters-update a:hover {
+  text-decoration: underline;
+}
+
+.klub1952 .opis {
+  text-align: justify;
+  max-width: 780px;
+  margin: 0 auto 32px;
+}
+
+.klub1952 .opis p {
+  margin-bottom: 14px;
+  color: #bbb;
+  line-height: 1.65;
+}
+
+.klub1952 .opis a {
+  color: var(--red);
+}
+
+.klub1952 .opis strong {
+  color: var(--white);
+}
+
+.qr-link {
+  display: inline-block;
+}
+
+.qr-code {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.qr-code:hover {
+  border-color: var(--red);
+  transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .klub1952 {
+    padding: 28px 18px;
+  }
+
+  .klub1952-logo {
+    width: 220px;
+  }
+
+  .supporters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
 
 /* ── Results ── */
 
