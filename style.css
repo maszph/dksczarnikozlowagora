@@ -1547,3 +1547,85 @@ body.header-collapsed .fm-btn {
     transition-delay: 0s !important;
   }
 }
+
+/* ============================================================
+   FACEBOOK NEWS – automatycznie pobierany najnowszy post
+   ============================================================ */
+
+.facebook-news {
+  overflow: hidden;
+}
+
+.facebook-news .fb-message {
+  color: #ccc;
+  margin-bottom: 14px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.facebook-news .fb-image {
+  width: 100%;
+  max-height: 700px;
+  object-fit: contain;
+  object-position: center;
+  background: #111;
+  border-radius: 8px;
+  margin-top: 16px;
+  display: block;
+}
+
+.facebook-news .fb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 11px 22px;
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition), transform var(--transition);
+}
+
+.facebook-news .fb-button:hover {
+  background: transparent;
+  border-color: var(--red);
+  color: var(--red);
+  transform: translateY(-2px);
+}
+
+.facebook-news .fb-source {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.facebook-news .fb-source strong {
+  color: #aaa;
+}
+
+.facebook-news .fb-no-post {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+@media (max-width: 480px) {
+
+  .facebook-news .fb-button {
+    width: 100%;
+  }
+
+  .facebook-news .fb-image {
+    max-height: 500px;
+  }
+
+}
