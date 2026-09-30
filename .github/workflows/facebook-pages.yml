@@ -1,0 +1,50 @@
+name: Aktualizacja Facebooka i publikacja strony
+
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "*/15 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Pobierz pliki strony
+        uses: actions/checkout@v6
+
+      - name: Aktualizuj najnowszy post z Facebooka
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: node update-facebook-post.js
+
+      - name: Przygotuj GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Przygotuj pliki do publikacji
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+
+      - name: Opublikuj stronę
+        id: deployment
+        uses: actions/deploy-pages@v4
